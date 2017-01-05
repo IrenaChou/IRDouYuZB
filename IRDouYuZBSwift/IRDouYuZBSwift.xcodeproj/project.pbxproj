@@ -187,6 +187,7 @@
 		61BD4FF51E1CFF7C001C1462 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = IR;
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = ir;
@@ -411,9 +412,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 4YVNK9L8DK;
 				INFOPLIST_FILE = IRDouYuZBSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ir.test.IRDouYuZBSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,9 +427,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 4YVNK9L8DK;
 				INFOPLIST_FILE = IRDouYuZBSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ir.test.IRDouYuZBSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -508,6 +511,7 @@
 				61BD50271E1CFF7C001C1462 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61BD50281E1CFF7C001C1462 /* Build configuration list for PBXNativeTarget "IRDouYuZBSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +520,7 @@
 				61BD502A1E1CFF7C001C1462 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61BD502B1E1CFF7C001C1462 /* Build configuration list for PBXNativeTarget "IRDouYuZBSwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +529,7 @@
 				61BD502D1E1CFF7C001C1462 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
