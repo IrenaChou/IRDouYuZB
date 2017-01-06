@@ -8,10 +8,49 @@
 
 import UIKit
 
+private let kTtitleViewHeight : CGFloat = 40
+
+
 class IRHomeViewController: UIViewController {
+    
+    
+    // MARK: - 懒加载属性
+    private lazy var pageTitleView : IRPageTitleView = {
+        let titleFrame = CGRect.init(x: 0, y: kStatusBarHeight+kNavigationBarHeight, width: kScreenWidth, height: kTtitleViewHeight)
+        let titles = ["推荐","游戏","娱乐","趣玩"]
+        let titleView = IRPageTitleView(frame: titleFrame, titles: titles)
+        
+        return titleView
+        
+    }()
+    
+
+    private lazy var pageContentView : IRPageContentView = {
+        let contentY = kStatusBarHeight + kNavigationBarHeight + kTtitleViewHeight
+        let contentFrame = CGRect(x: 0, y: contentY, width: kScreenWidth, height: kScreenHeight - contentY)
+        
+       var childVCs = [ UIViewController() ]
+        for _ in 0..<4{
+           let vc = UIViewController()
+            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
+            childVCs.append(vc)
+        }
+        
+       let contentV = IRPageContentView(frame: contentFrame, childViewCtrls: childVCs, parentViewCtrl: self)
+        
+        return contentV
+    }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+// MARK: - - 设置UI界面 extension IRHomeViewController
         setupUI()
+        
+        view.addSubview(pageTitleView)
+        view.addSubview(pageContentView)
+        pageContentView.backgroundColor = UIColor.purple
     }
 
 }
@@ -19,6 +58,9 @@ class IRHomeViewController: UIViewController {
 // MARK: - 设置UI界面
 extension IRHomeViewController{
     func setupUI(){
+//        无需调整scrollView的内边距
+        automaticallyAdjustsScrollViewInsets = false
+        
         setupNavigationBar()
     }
     
@@ -26,11 +68,6 @@ extension IRHomeViewController{
     private func setupNavigationBar(){
         
         /// 设置左侧item
-//        let leftBtn = UIButton()
-//        leftBtn.setImage(#imageLiteral(resourceName: "logo"), for: UIControlState.normal)
-//        leftBtn.sizeToFit()
-        
-//        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBtn)
         navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "logo")
         
         

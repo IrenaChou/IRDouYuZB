@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		611D44D81E1F41D80075E1B6 /* IRPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611D44D71E1F41D80075E1B6 /* IRPageTitleView.swift */; };
+		611D44DA1E1F44720075E1B6 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611D44D91E1F44720075E1B6 /* Common.swift */; };
+		611D44DC1E1F7CC40075E1B6 /* IRPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611D44DB1E1F7CC40075E1B6 /* IRPageContentView.swift */; };
+		611D44DE1E1F80CE0075E1B6 /* UIColor_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611D44DD1E1F80CE0075E1B6 /* UIColor_Extension.swift */; };
 		615596431E1E178000F6EE4C /* IRFollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615596281E1E178000F6EE4C /* IRFollowViewController.swift */; };
 		615596441E1E178000F6EE4C /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6155962B1E1E178000F6EE4C /* Follow.storyboard */; };
 		615596451E1E178000F6EE4C /* IRHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6155962E1E1E178000F6EE4C /* IRHomeViewController.swift */; };
@@ -42,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		611D44D71E1F41D80075E1B6 /* IRPageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRPageTitleView.swift; sourceTree = "<group>"; };
+		611D44D91E1F44720075E1B6 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		611D44DB1E1F7CC40075E1B6 /* IRPageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRPageContentView.swift; sourceTree = "<group>"; };
+		611D44DD1E1F80CE0075E1B6 /* UIColor_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor_Extension.swift; sourceTree = "<group>"; };
 		615596281E1E178000F6EE4C /* IRFollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRFollowViewController.swift; sourceTree = "<group>"; };
 		6155962B1E1E178000F6EE4C /* Follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Follow.storyboard; sourceTree = "<group>"; };
 		6155962E1E1E178000F6EE4C /* IRHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRHomeViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +98,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		611D44D51E1F41BA0075E1B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		611D44D61E1F41BA0075E1B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				611D44D71E1F41D80075E1B6 /* IRPageTitleView.swift */,
+				611D44DB1E1F7CC40075E1B6 /* IRPageContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		615596251E1E178000F6EE4C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +262,8 @@
 		6155963E1E1E178000F6EE4C /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				611D44D51E1F41BA0075E1B6 /* Model */,
+				611D44D61E1F41BA0075E1B6 /* View */,
 				6155963F1E1E178000F6EE4C /* Controller */,
 			);
 			path = Public;
@@ -256,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				6155964D1E1E4C7D00F6EE4C /* Extension */,
+				611D44D91E1F44720075E1B6 /* Common.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -264,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				6155964E1E1E4CAE00F6EE4C /* UIBarButtonItem_Extension.swift */,
+				611D44DD1E1F80CE0075E1B6 /* UIColor_Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -458,11 +486,15 @@
 				615596431E1E178000F6EE4C /* IRFollowViewController.swift in Sources */,
 				61BD50011E1CFF7C001C1462 /* AppDelegate.swift in Sources */,
 				6155964C1E1E178000F6EE4C /* IRBaseTabBarController.swift in Sources */,
+				611D44DC1E1F7CC40075E1B6 /* IRPageContentView.swift in Sources */,
 				615596451E1E178000F6EE4C /* IRHomeViewController.swift in Sources */,
 				6155964F1E1E4CAE00F6EE4C /* UIBarButtonItem_Extension.swift in Sources */,
 				615596471E1E178000F6EE4C /* IRLiveViewController.swift in Sources */,
+				611D44D81E1F41D80075E1B6 /* IRPageTitleView.swift in Sources */,
 				6155964B1E1E178000F6EE4C /* IRBaseNavigationController.swift in Sources */,
+				611D44DA1E1F44720075E1B6 /* Common.swift in Sources */,
 				615596491E1E178000F6EE4C /* IRProfileViewController.swift in Sources */,
+				611D44DE1E1F80CE0075E1B6 /* UIColor_Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
