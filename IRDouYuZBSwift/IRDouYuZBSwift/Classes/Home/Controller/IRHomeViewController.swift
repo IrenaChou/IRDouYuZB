@@ -1,4 +1,4 @@
-//
+
 //  IRHomeViewController.swift
 //  IRDouYuZBSwift
 //
@@ -15,21 +15,24 @@ class IRHomeViewController: UIViewController {
     
     
     // MARK: - 懒加载属性
-    private lazy var pageTitleView : IRPageTitleView = {
+    lazy var pageTitleView : IRPageTitleView = { [weak self] in
         let titleFrame = CGRect.init(x: 0, y: kStatusBarHeight+kNavigationBarHeight, width: kScreenWidth, height: kTtitleViewHeight)
         let titles = ["推荐","游戏","娱乐","趣玩"]
         let titleView = IRPageTitleView(frame: titleFrame, titles: titles)
+        
+        titleView.delegate = self
+        
         
         return titleView
         
     }()
     
 
-    private lazy var pageContentView : IRPageContentView = {
+    lazy var pageContentView : IRPageContentView = {[weak self] in
         let contentY = kStatusBarHeight + kNavigationBarHeight + kTtitleViewHeight
         let contentFrame = CGRect(x: 0, y: contentY, width: kScreenWidth, height: kScreenHeight - contentY)
         
-       var childVCs = [ UIViewController() ]
+       var childVCs = [ UIViewController ]()
         for _ in 0..<4{
            let vc = UIViewController()
             vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
@@ -38,16 +41,15 @@ class IRHomeViewController: UIViewController {
         
        let contentV = IRPageContentView(frame: contentFrame, childViewCtrls: childVCs, parentViewCtrl: self)
         
+        contentV.delegate = self
+        
         return contentV
     }()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-// MARK: - - 设置UI界面 extension IRHomeViewController
         setupUI()
-        
         view.addSubview(pageTitleView)
         view.addSubview(pageContentView)
         pageContentView.backgroundColor = UIColor.purple
@@ -81,5 +83,21 @@ extension IRHomeViewController{
         
         navigationItem.rightBarButtonItems = [rightHistoryBtn , searchHistoryBtn,scanHistoryBtn ]
         
+    }
+}
+
+
+// MARK: - 遵守IRPageTitleViewDelegate协议
+extension IRHomeViewController: IRPageTitleViewDelegate{
+    func pageTitleViewDelegate(titleView: IRPageTitleView, selectedIndex index: Int) {
+        pageContentView.setCurrentIndex(currentIndex: index)
+    }
+}
+
+
+// MARK: - 遵守IRPageContentViewDelegate协议
+extension IRHomeViewController : IRPageContentViewDelegate{
+    func pageContentView(pageContentView: IRPageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        pageTitleView.setTitleWith(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
 }
