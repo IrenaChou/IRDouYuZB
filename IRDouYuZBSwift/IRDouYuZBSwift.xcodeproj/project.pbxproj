@@ -26,6 +26,13 @@
 		61BD50081E1CFF7C001C1462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61BD50071E1CFF7C001C1462 /* Assets.xcassets */; };
 		61BD50161E1CFF7C001C1462 /* IRDouYuZBSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD50151E1CFF7C001C1462 /* IRDouYuZBSwiftTests.swift */; };
 		61BD50211E1CFF7C001C1462 /* IRDouYuZBSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD50201E1CFF7C001C1462 /* IRDouYuZBSwiftUITests.swift */; };
+		61DB6CB71E247D1C00134B81 /* IRRecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DB6CB61E247D1C00134B81 /* IRRecommendViewController.swift */; };
+		61DB6CBA1E24AA7200134B81 /* IRCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DB6CB81E24AA7200134B81 /* IRCollectionHeaderView.swift */; };
+		61DB6CBB1E24AA7200134B81 /* IRCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61DB6CB91E24AA7200134B81 /* IRCollectionHeaderView.xib */; };
+		61DB6CBF1E24C1D600134B81 /* IRCollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DB6CBD1E24C1D600134B81 /* IRCollectionNormalCell.swift */; };
+		61DB6CC01E24C1D600134B81 /* IRCollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61DB6CBE1E24C1D600134B81 /* IRCollectionNormalCell.xib */; };
+		61DB6CC51E24CA1F00134B81 /* IRCollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DB6CC31E24CA1F00134B81 /* IRCollectionPrettyCell.swift */; };
+		61DB6CC61E24CA1F00134B81 /* IRCollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61DB6CC41E24CA1F00134B81 /* IRCollectionPrettyCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +60,7 @@
 		615596281E1E178000F6EE4C /* IRFollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRFollowViewController.swift; sourceTree = "<group>"; };
 		6155962B1E1E178000F6EE4C /* Follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Follow.storyboard; sourceTree = "<group>"; };
 		6155962E1E1E178000F6EE4C /* IRHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRHomeViewController.swift; sourceTree = "<group>"; };
-		615596311E1E178000F6EE4C /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		615596311E1E178000F6EE4C /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = ../View/Home.storyboard; sourceTree = "<group>"; };
 		615596341E1E178000F6EE4C /* IRLiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRLiveViewController.swift; sourceTree = "<group>"; };
 		615596371E1E178000F6EE4C /* Live.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Live.storyboard; sourceTree = "<group>"; };
 		6155963A1E1E178000F6EE4C /* IRProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRProfileViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +78,13 @@
 		61BD501C1E1CFF7C001C1462 /* IRDouYuZBSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IRDouYuZBSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61BD50201E1CFF7C001C1462 /* IRDouYuZBSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRDouYuZBSwiftUITests.swift; sourceTree = "<group>"; };
 		61BD50221E1CFF7C001C1462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61DB6CB61E247D1C00134B81 /* IRRecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRRecommendViewController.swift; sourceTree = "<group>"; };
+		61DB6CB81E24AA7200134B81 /* IRCollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRCollectionHeaderView.swift; sourceTree = "<group>"; };
+		61DB6CB91E24AA7200134B81 /* IRCollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IRCollectionHeaderView.xib; sourceTree = "<group>"; };
+		61DB6CBD1E24C1D600134B81 /* IRCollectionNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRCollectionNormalCell.swift; sourceTree = "<group>"; };
+		61DB6CBE1E24C1D600134B81 /* IRCollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IRCollectionNormalCell.xib; sourceTree = "<group>"; };
+		61DB6CC31E24CA1F00134B81 /* IRCollectionPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRCollectionPrettyCell.swift; sourceTree = "<group>"; };
+		61DB6CC41E24CA1F00134B81 /* IRCollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IRCollectionPrettyCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +124,10 @@
 			children = (
 				611D44D71E1F41D80075E1B6 /* IRPageTitleView.swift */,
 				611D44DB1E1F7CC40075E1B6 /* IRPageContentView.swift */,
+				61DB6CBD1E24C1D600134B81 /* IRCollectionNormalCell.swift */,
+				61DB6CBE1E24C1D600134B81 /* IRCollectionNormalCell.xib */,
+				61DB6CC31E24CA1F00134B81 /* IRCollectionPrettyCell.swift */,
+				61DB6CC41E24CA1F00134B81 /* IRCollectionPrettyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,7 +191,9 @@
 		6155962D1E1E178000F6EE4C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				615596311E1E178000F6EE4C /* Home.storyboard */,
 				6155962E1E1E178000F6EE4C /* IRHomeViewController.swift */,
+				61DB6CB61E247D1C00134B81 /* IRRecommendViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -188,7 +208,8 @@
 		615596301E1E178000F6EE4C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				615596311E1E178000F6EE4C /* Home.storyboard */,
+				61DB6CB81E24AA7200134B81 /* IRCollectionHeaderView.swift */,
+				61DB6CB91E24AA7200134B81 /* IRCollectionHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -322,6 +343,7 @@
 				61BD50001E1CFF7C001C1462 /* AppDelegate.swift */,
 				615596251E1E178000F6EE4C /* Classes */,
 				61BD50071E1CFF7C001C1462 /* Assets.xcassets */,
+				61DB6CBC1E24AC2100134B81 /* New Group */,
 				61BD500C1E1CFF7C001C1462 /* Info.plist */,
 			);
 			path = IRDouYuZBSwift;
@@ -343,6 +365,13 @@
 				61BD50221E1CFF7C001C1462 /* Info.plist */,
 			);
 			path = IRDouYuZBSwiftUITests;
+			sourceTree = "<group>";
+		};
+		61DB6CBC1E24AC2100134B81 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,8 +485,11 @@
 			files = (
 				615596461E1E178000F6EE4C /* Home.storyboard in Resources */,
 				61BD50081E1CFF7C001C1462 /* Assets.xcassets in Resources */,
+				61DB6CC61E24CA1F00134B81 /* IRCollectionPrettyCell.xib in Resources */,
 				6155964A1E1E178000F6EE4C /* Profile.storyboard in Resources */,
 				615596481E1E178000F6EE4C /* Live.storyboard in Resources */,
+				61DB6CBB1E24AA7200134B81 /* IRCollectionHeaderView.xib in Resources */,
+				61DB6CC01E24C1D600134B81 /* IRCollectionNormalCell.xib in Resources */,
 				615596441E1E178000F6EE4C /* Follow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,15 +515,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61DB6CB71E247D1C00134B81 /* IRRecommendViewController.swift in Sources */,
 				615596431E1E178000F6EE4C /* IRFollowViewController.swift in Sources */,
 				61BD50011E1CFF7C001C1462 /* AppDelegate.swift in Sources */,
 				6155964C1E1E178000F6EE4C /* IRBaseTabBarController.swift in Sources */,
+				61DB6CBF1E24C1D600134B81 /* IRCollectionNormalCell.swift in Sources */,
 				611D44DC1E1F7CC40075E1B6 /* IRPageContentView.swift in Sources */,
+				61DB6CC51E24CA1F00134B81 /* IRCollectionPrettyCell.swift in Sources */,
 				615596451E1E178000F6EE4C /* IRHomeViewController.swift in Sources */,
 				6155964F1E1E4CAE00F6EE4C /* UIBarButtonItem_Extension.swift in Sources */,
 				615596471E1E178000F6EE4C /* IRLiveViewController.swift in Sources */,
 				611D44D81E1F41D80075E1B6 /* IRPageTitleView.swift in Sources */,
 				6155964B1E1E178000F6EE4C /* IRBaseNavigationController.swift in Sources */,
+				61DB6CBA1E24AA7200134B81 /* IRCollectionHeaderView.swift in Sources */,
 				611D44DA1E1F44720075E1B6 /* Common.swift in Sources */,
 				615596491E1E178000F6EE4C /* IRProfileViewController.swift in Sources */,
 				611D44DE1E1F80CE0075E1B6 /* UIColor_Extension.swift in Sources */,

@@ -29,11 +29,13 @@ class IRHomeViewController: UIViewController {
     
 
     lazy var pageContentView : IRPageContentView = {[weak self] in
-        let contentY = kStatusBarHeight + kNavigationBarHeight + kTtitleViewHeight
-        let contentFrame = CGRect(x: 0, y: contentY, width: kScreenWidth, height: kScreenHeight - contentY)
+        let contentH = kScreenHeight - kStatusBarHeight - kNavigationBarHeight - kTtitleViewHeight - kTabbarHeight
+        let contentFrame = CGRect(x: 0, y: kStatusBarHeight + kNavigationBarHeight + kTtitleViewHeight, width: kScreenWidth, height: contentH)
         
        var childVCs = [ UIViewController ]()
-        for _ in 0..<4{
+       childVCs.append(IRRecommendViewController());
+        
+        for _ in 0..<3{
            let vc = UIViewController()
             vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             childVCs.append(vc)
