@@ -50,14 +50,18 @@ class IRRecommendViewController: UIViewController {
         return collectV
     }()
     
+    lazy var recommendVM : IRRecommendViewModel = IRRecommendViewModel()
+    
     // MARK:- 系统回调函数
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
+        
+        // 设置UI界面
         setupUI()
 
-        //颜值
-//        http://capi.douyucdn.cn/api/v1/getVerticalRoom?limit=4&client_sys=ios&offset=0
+        // 发送网络请求
+        loadData()
     }
 }
 
@@ -68,7 +72,12 @@ extension IRRecommendViewController{
     }
 }
 
-
+// MARK: - 请求数据
+extension IRRecommendViewController {
+    func loadData(){
+        recommendVM.requestData()
+    }
+}
 
 // MARK: - 遵守UICollectionViewDataSource协议
 extension IRRecommendViewController : UICollectionViewDataSource{
@@ -108,7 +117,6 @@ extension IRRecommendViewController : UICollectionViewDataSource{
     }
 }
 
-
 // MARK: - 遵守UICollectionViewDelegateFlowLayout协议
 extension IRRecommendViewController : UICollectionViewDelegateFlowLayout {
 
@@ -120,5 +128,6 @@ extension IRRecommendViewController : UICollectionViewDelegateFlowLayout {
         return CGSize(width: kItemWidth, height: kNormalItemHeight)
     }
 }
+
 
 

@@ -13,9 +13,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkTools.requestData(type: .POST, URLString: "http://httpbin.org/post") { (result) in
-            print(result)
+//        NetworkTools.requestData(type: .Get, URLString: "http://httpbin.org/get") { (result) in
+//            print(result)
+//        }
+        NetworkTools.requestData(type: MethodType.Get, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate",parameter: ["limit":"4","offset":"0","time":"1484124821"]) { (result) in
+                print(result)
         }
+
     }
 
     override func didReceiveMemoryWarning() {

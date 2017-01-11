@@ -130,7 +130,7 @@ extension IRPageContentView : UICollectionViewDelegate{
                 targetIndex = sourceIndex
             }
 
-            print("左 progress=\(progress),targetIndex=\(targetIndex),sourceIndex=\(sourceIndex)")
+//            print("左 progress=\(progress),targetIndex=\(targetIndex),sourceIndex=\(sourceIndex)")
 
         }else{
             //右滑
@@ -142,11 +142,11 @@ extension IRPageContentView : UICollectionViewDelegate{
             if sourceIndex >= childVCs.count {
                 sourceIndex = childVCs.count - 1
             }
-            print("右\(progress)")
+//            print("右\(progress)")
         }
         
         
-        print("右 progress=\(progress),targetIndex=\(targetIndex),sourceIndex=\(sourceIndex)")
+//        print("右 progress=\(progress),targetIndex=\(targetIndex),sourceIndex=\(sourceIndex)")
         
         delegate?.pageContentView(pageContentView: self, progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
         
