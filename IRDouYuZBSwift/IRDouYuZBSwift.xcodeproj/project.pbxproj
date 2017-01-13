@@ -12,6 +12,8 @@
 		611D44DA1E1F44720075E1B6 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611D44D91E1F44720075E1B6 /* Common.swift */; };
 		611D44DC1E1F7CC40075E1B6 /* IRPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611D44DB1E1F7CC40075E1B6 /* IRPageContentView.swift */; };
 		611D44DE1E1F80CE0075E1B6 /* UIColor_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611D44DD1E1F80CE0075E1B6 /* UIColor_Extension.swift */; };
+		613806841E28A7DB0067CFC9 /* IRAnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613806831E28A7DB0067CFC9 /* IRAnchorGroup.swift */; };
+		613806861E28C6B50067CFC9 /* IRAnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613806851E28C6B50067CFC9 /* IRAnchorModel.swift */; };
 		615596431E1E178000F6EE4C /* IRFollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615596281E1E178000F6EE4C /* IRFollowViewController.swift */; };
 		615596441E1E178000F6EE4C /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6155962B1E1E178000F6EE4C /* Follow.storyboard */; };
 		615596451E1E178000F6EE4C /* IRHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6155962E1E1E178000F6EE4C /* IRHomeViewController.swift */; };
@@ -63,6 +65,8 @@
 		611D44D91E1F44720075E1B6 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		611D44DB1E1F7CC40075E1B6 /* IRPageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRPageContentView.swift; sourceTree = "<group>"; };
 		611D44DD1E1F80CE0075E1B6 /* UIColor_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor_Extension.swift; sourceTree = "<group>"; };
+		613806831E28A7DB0067CFC9 /* IRAnchorGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRAnchorGroup.swift; sourceTree = "<group>"; };
+		613806851E28C6B50067CFC9 /* IRAnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRAnchorModel.swift; sourceTree = "<group>"; };
 		615596281E1E178000F6EE4C /* IRFollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRFollowViewController.swift; sourceTree = "<group>"; };
 		6155962B1E1E178000F6EE4C /* Follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Follow.storyboard; sourceTree = "<group>"; };
 		6155962E1E1E178000F6EE4C /* IRHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRHomeViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 		611D44D51E1F41BA0075E1B6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				613806831E28A7DB0067CFC9 /* IRAnchorGroup.swift */,
+				613806851E28C6B50067CFC9 /* IRAnchorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -479,7 +485,6 @@
 				TargetAttributes = {
 					61BD4FFC1E1CFF7C001C1462 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 4YVNK9L8DK;
 						ProvisioningStyle = Automatic;
 					};
 					61BD50101E1CFF7C001C1462 = {
@@ -603,6 +608,7 @@
 				6102AAC31E25DEF5004704CF /* NetworkTools.swift in Sources */,
 				61A827BF1E25FF3D009C7F5D /* IRRecommendViewModel.swift in Sources */,
 				615596431E1E178000F6EE4C /* IRFollowViewController.swift in Sources */,
+				613806861E28C6B50067CFC9 /* IRAnchorModel.swift in Sources */,
 				61A827C11E26048A009C7F5D /* NSDate_Extension.swift in Sources */,
 				61BD50011E1CFF7C001C1462 /* AppDelegate.swift in Sources */,
 				6155964C1E1E178000F6EE4C /* IRBaseTabBarController.swift in Sources */,
@@ -612,6 +618,7 @@
 				615596451E1E178000F6EE4C /* IRHomeViewController.swift in Sources */,
 				6155964F1E1E4CAE00F6EE4C /* UIBarButtonItem_Extension.swift in Sources */,
 				615596471E1E178000F6EE4C /* IRLiveViewController.swift in Sources */,
+				613806841E28A7DB0067CFC9 /* IRAnchorGroup.swift in Sources */,
 				611D44D81E1F41D80075E1B6 /* IRPageTitleView.swift in Sources */,
 				6155964B1E1E178000F6EE4C /* IRBaseNavigationController.swift in Sources */,
 				61DB6CBA1E24AA7200134B81 /* IRCollectionHeaderView.swift in Sources */,
@@ -751,11 +758,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = 4YVNK9L8DK;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IRDouYuZBSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ir.test.IRDouYuZBSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ic.dy.IRDouYuZBSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -768,11 +775,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = 4YVNK9L8DK;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IRDouYuZBSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ir.test.IRDouYuZBSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ic.dy.IRDouYuZBSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
