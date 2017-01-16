@@ -25,14 +25,14 @@ class IRAnchorGroup: NSObject {
     var tag_name : String?
     /// 组显示的图标
     var icon_name : String = "home_header_normal"
-
     /// 定义主播的模型对象数组
     lazy var anchors : [IRAnchorModel] = [IRAnchorModel]()
     
+    var tag_id : Int?
 //    var push_vertical_screen : String?
 //    var icon_url : String?
 //    var push_nearby : String?
-//    var tag_id : String?
+    
     
     
     /// 重写构造函数 

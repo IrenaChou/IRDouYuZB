@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,13 +18,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="184" height="213"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v47-2s-E0m">
-                        <rect key="frame" x="0.0" y="189" width="41" height="14"/>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v47-2s-E0m">
+                        <rect key="frame" x="0.0" y="189" width="35" height="14"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="14" id="MkN-Km-rak"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <state key="normal" title="  上海" image="ico_location">
+                        <state key="normal" title="上海" image="ico_location">
                             <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         </state>
                     </button>
@@ -45,23 +46,24 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8在线" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hko-qP-YFM">
-                        <rect key="frame" x="119" y="5" width="60" height="20"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIX-0O-Abf">
+                        <rect key="frame" x="116" y="8" width="60" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="20" id="8fV-ej-cUh"/>
-                            <constraint firstAttribute="width" constant="60" id="wYi-ja-h3v"/>
+                            <constraint firstAttribute="width" constant="60" id="Rpa-8u-r0r"/>
+                            <constraint firstAttribute="height" constant="20" id="zUc-YP-UMf"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
+                        <state key="normal" title="8人在线">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                 <integer key="value" value="3"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
-                    </label>
+                    </button>
                 </subviews>
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -70,15 +72,21 @@
                 <constraint firstItem="v47-2s-E0m" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="GGH-O6-MqC"/>
                 <constraint firstItem="KnX-l7-fwE" firstAttribute="top" secondItem="PfI-kz-K3x" secondAttribute="bottom" constant="5" id="KPN-wj-ZyK"/>
                 <constraint firstItem="PfI-kz-K3x" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="MGu-Ti-jNk"/>
+                <constraint firstAttribute="trailing" secondItem="pIX-0O-Abf" secondAttribute="trailing" constant="8" id="OQr-d0-G1q"/>
                 <constraint firstItem="KnX-l7-fwE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="QYN-1A-G4F"/>
                 <constraint firstAttribute="bottom" secondItem="v47-2s-E0m" secondAttribute="bottom" constant="10" id="Qrm-U7-co0"/>
+                <constraint firstItem="pIX-0O-Abf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="XJy-kd-chW"/>
                 <constraint firstAttribute="trailing" secondItem="KnX-l7-fwE" secondAttribute="trailing" constant="5" id="qtg-1w-x35"/>
                 <constraint firstAttribute="trailing" secondItem="PfI-kz-K3x" secondAttribute="trailing" id="sC8-bG-WjQ"/>
-                <constraint firstAttribute="trailing" secondItem="hko-qP-YFM" secondAttribute="trailing" constant="5" id="veY-gK-0aE"/>
                 <constraint firstItem="v47-2s-E0m" firstAttribute="top" secondItem="KnX-l7-fwE" secondAttribute="bottom" constant="5" id="xU5-Xh-k4b"/>
-                <constraint firstItem="hko-qP-YFM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="ze1-Il-p3b"/>
             </constraints>
             <size key="customSize" width="184" height="213"/>
+            <connections>
+                <outlet property="cityBtn" destination="v47-2s-E0m" id="WDs-Jc-vtn"/>
+                <outlet property="iconImageView" destination="PfI-kz-K3x" id="cSk-gB-XT1"/>
+                <outlet property="nickNameLabel" destination="KnX-l7-fwE" id="VdE-d1-fd8"/>
+                <outlet property="onlineBtn" destination="pIX-0O-Abf" id="THx-Vb-vmR"/>
+            </connections>
             <point key="canvasLocation" x="-18" y="-99.5"/>
         </collectionViewCell>
     </objects>

@@ -18,6 +18,7 @@ private let kHeaderViewHeight : CGFloat = 50
 private let kNormalCellID : String = "kNormalCellID"
 private let kPrettyCellID : String = "kPrettyCellID"
 private let kHeaderViewID : String = "kHeaderViewID"
+private let kCycleViewHeight : CGFloat =  kScreenWidth * 3 / 8
 
 class IRRecommendViewController: UIViewController {
     // MARK:- 懒加载
@@ -51,6 +52,11 @@ class IRRecommendViewController: UIViewController {
     }()
     
     lazy var recommendVM : IRRecommendViewModel = IRRecommendViewModel()
+    lazy var recommendCycleView : IRCycleView = {
+        let cycleView = IRCycleView.cycleView()
+        cycleView.frame = CGRect(x: 0, y: -kCycleViewHeight, width: kScreenWidth, height: kCycleViewHeight)
+        return cycleView
+    }()
     
     // MARK:- 系统回调函数
     override func viewDidLoad() {
@@ -69,13 +75,21 @@ class IRRecommendViewController: UIViewController {
 extension IRRecommendViewController{
     func setupUI(){
         view.addSubview(collectView)
+        
+        //将cycleView添加到collectionView中
+        collectView.addSubview(recommendCycleView)
+        
+        //设置collectionView的内边距
+        collectView.contentInset = UIEdgeInsets(top: kCycleViewHeight, left: 0, bottom: 0, right: 0)
     }
 }
 
 // MARK: - 请求数据
 extension IRRecommendViewController {
     func loadData(){
-        recommendVM.requestData()
+        recommendVM.requestData { 
+            self.collectView.reloadData()
+        }
     }
 }
 
@@ -83,35 +97,39 @@ extension IRRecommendViewController {
 extension IRRecommendViewController : UICollectionViewDataSource{
     @available(iOS 6.0, *)
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        //取出模型
+        let group = recommendVM.anchorGroups[indexPath.section]
+        let anchor = group.anchors[indexPath.row]
         
-        var cell : UICollectionViewCell!
+//        定义cell
+        let cell : IRCollectionBaseCell!
         
         if indexPath.section == 1 {
-            cell = collectView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath)
+            cell = collectView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath) as! IRCollectionPrettyCell
         }else{
-            cell = collectView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
+            cell = collectView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! IRCollectionNormalCell
         }
-
+        cell.anchor = anchor
         return cell
     }
 
     @available(iOS 6.0, *)
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
-            return 8
-        }
-        return 4
+        let group = recommendVM.anchorGroups[section]
+        return group.anchors.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 12
+        return recommendVM.anchorGroups.count
     }
     
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         //取出section的HeaderView
-        let headerView = collectView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath)
+        let headerView = collectView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! IRCollectionHeaderView
     
+        //设置数据
+        headerView.group = recommendVM.anchorGroups[indexPath.section]
         
         return headerView
     }

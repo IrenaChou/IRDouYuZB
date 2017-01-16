@@ -141,26 +141,34 @@ extension IRPageTitleView {
 // MARK: - 监听Label的点击
 extension IRPageTitleView{
     func titleLabelClick(tapGes: UITapGestureRecognizer){
+        
+        
         //获取当前label
         guard let currentLabel = tapGes.view as? UILabel else { return }
         //获取之前的label
         let oldLabel = titleLabels[currentIndex]
+
+//        重复点击同一个title，直接返回
+        if currentLabel.tag == currentIndex {
+            return
+        }
+        
         
         currentLabel.textColor = UIColor(r: kSelectColor.0, g: kSelectColor.1, b: kSelectColor.2)
         oldLabel.textColor = UIColor(r: kNormalColor.0, g: kNormalColor.1, b: kNormalColor.2)
         
-    
-        
+        //保存最新Label下标
+        currentIndex = currentLabel.tag
+
+        let scrollLineX = CGFloat(currentIndex) * currentLabel.frame.width
         //调整scrollLine的frame
         UIView.animate(withDuration: 0.15) {
-            self.scrollLine.frame.origin.x = currentLabel.frame.origin.x
+            self.scrollLine.frame.origin.x = scrollLineX
         }
         
         //通知代理
         delegate?.pageTitleViewDelegate(titleView: self, selectedIndex: currentIndex)
         
-        //保存最新Label下标
-        currentIndex = currentLabel.tag
     }
 }
 
