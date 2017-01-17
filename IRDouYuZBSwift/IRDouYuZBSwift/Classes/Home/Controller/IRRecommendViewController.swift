@@ -87,8 +87,12 @@ extension IRRecommendViewController{
 // MARK: - 请求数据
 extension IRRecommendViewController {
     func loadData(){
-        recommendVM.requestData { 
+        recommendVM.requestData {
             self.collectView.reloadData()
+        }
+//        请求图片轮播数据
+        recommendVM.requestCycleData {
+            self.recommendCycleView.cycleModels = self.recommendVM.cycleModels
         }
     }
 }
@@ -99,7 +103,7 @@ extension IRRecommendViewController : UICollectionViewDataSource{
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         //取出模型
         let group = recommendVM.anchorGroups[indexPath.section]
-        let anchor = group.anchors[indexPath.row]
+        let anchor = group.anchors[indexPath.item]
         
 //        定义cell
         let cell : IRCollectionBaseCell!

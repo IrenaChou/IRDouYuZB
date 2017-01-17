@@ -15,13 +15,14 @@ class IRRecommendViewModel {
     lazy var anchorGroups : [IRAnchorGroup] = [IRAnchorGroup]()
     lazy var bigDataGroup : IRAnchorGroup = IRAnchorGroup()
     lazy var prettyGroup : IRAnchorGroup = IRAnchorGroup()
+    lazy var cycleModels : [IRCycleModel] = [IRCycleModel]()
 }
 
 
 // MARK: - 发送网络请求
 extension IRRecommendViewModel {
     
-    /// 网络请求所有数据
+    /// 请求推荐数据
     ///
     /// - Parameter finishCallBack: 请求数据后的回调
     func requestData(finishCallBack : @escaping () -> ()) {
@@ -111,6 +112,26 @@ extension IRRecommendViewModel {
             self.anchorGroups.insert(self.prettyGroup, at: 0)
             self.anchorGroups.insert(self.bigDataGroup, at: 0)
             
+            finishCallBack()
+        }
+    }
+
+
+    
+    /// 请求图片轮播数据
+    ///
+    /// - Parameter finishCallBack:  请求数据后的回调
+    func requestCycleData(finishCallBack: @escaping () -> ()) {
+        //请求推荐数据
+        NetworkTools.requestData(type: MethodType.Get, URLString: "http://www.douyutv.com/api/v1/slide/6", parameter: ["version":"2.300"]) { (result) in
+            guard let resultDict = result as? [ String : NSObject ] else { return }
+            
+            guard let dataArray = resultDict["data"] as? [[String:NSObject]] else{ return }
+            
+            for dict in dataArray {
+              self.cycleModels.append(IRCycleModel(dict: dict))
+            }
+ 
             finishCallBack()
         }
     }

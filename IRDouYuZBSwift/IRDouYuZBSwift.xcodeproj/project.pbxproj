@@ -28,6 +28,9 @@
 		6155964B1E1E178000F6EE4C /* IRBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615596401E1E178000F6EE4C /* IRBaseNavigationController.swift */; };
 		6155964C1E1E178000F6EE4C /* IRBaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615596411E1E178000F6EE4C /* IRBaseTabBarController.swift */; };
 		6155964F1E1E4CAE00F6EE4C /* UIBarButtonItem_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6155964E1E1E4CAE00F6EE4C /* UIBarButtonItem_Extension.swift */; };
+		615DE1FE1E2E105E005ADD73 /* IRCycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615DE1FD1E2E105E005ADD73 /* IRCycleModel.swift */; };
+		615DE2031E2E15BA005ADD73 /* IRCollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615DE2011E2E15BA005ADD73 /* IRCollectionCycleCell.swift */; };
+		615DE2041E2E15BA005ADD73 /* IRCollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 615DE2021E2E15BA005ADD73 /* IRCollectionCycleCell.xib */; };
 		61A827BF1E25FF3D009C7F5D /* IRRecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A827BE1E25FF3D009C7F5D /* IRRecommendViewModel.swift */; };
 		61A827C11E26048A009C7F5D /* NSDate_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A827C01E26048A009C7F5D /* NSDate_Extension.swift */; };
 		61BD50011E1CFF7C001C1462 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD50001E1CFF7C001C1462 /* AppDelegate.swift */; };
@@ -84,6 +87,9 @@
 		615596401E1E178000F6EE4C /* IRBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRBaseNavigationController.swift; sourceTree = "<group>"; };
 		615596411E1E178000F6EE4C /* IRBaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRBaseTabBarController.swift; sourceTree = "<group>"; };
 		6155964E1E1E4CAE00F6EE4C /* UIBarButtonItem_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem_Extension.swift; sourceTree = "<group>"; };
+		615DE1FD1E2E105E005ADD73 /* IRCycleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRCycleModel.swift; sourceTree = "<group>"; };
+		615DE2011E2E15BA005ADD73 /* IRCollectionCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRCollectionCycleCell.swift; sourceTree = "<group>"; };
+		615DE2021E2E15BA005ADD73 /* IRCollectionCycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IRCollectionCycleCell.xib; sourceTree = "<group>"; };
 		61A827BE1E25FF3D009C7F5D /* IRRecommendViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRRecommendViewModel.swift; sourceTree = "<group>"; };
 		61A827C01E26048A009C7F5D /* NSDate_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDate_Extension.swift; sourceTree = "<group>"; };
 		61BD4FFD1E1CFF7C001C1462 /* IRDouYuZBSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRDouYuZBSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +177,8 @@
 			children = (
 				615040511E2CBF45008FF501 /* IRCycleView.swift */,
 				615040531E2CBF65008FF501 /* IRCycleView.xib */,
+				615DE2011E2E15BA005ADD73 /* IRCollectionCycleCell.swift */,
+				615DE2021E2E15BA005ADD73 /* IRCollectionCycleCell.xib */,
 			);
 			name = "图片轮播";
 			path = cycleView;
@@ -246,6 +254,7 @@
 		6155962F1E1E178000F6EE4C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				615DE1FD1E2E105E005ADD73 /* IRCycleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -545,6 +554,7 @@
 				615596461E1E178000F6EE4C /* Home.storyboard in Resources */,
 				61BD50081E1CFF7C001C1462 /* Assets.xcassets in Resources */,
 				61DB6CC61E24CA1F00134B81 /* IRCollectionPrettyCell.xib in Resources */,
+				615DE2041E2E15BA005ADD73 /* IRCollectionCycleCell.xib in Resources */,
 				6155964A1E1E178000F6EE4C /* Profile.storyboard in Resources */,
 				615596481E1E178000F6EE4C /* Live.storyboard in Resources */,
 				61DB6CBB1E24AA7200134B81 /* IRCollectionHeaderView.xib in Resources */,
@@ -628,6 +638,7 @@
 				61A827BF1E25FF3D009C7F5D /* IRRecommendViewModel.swift in Sources */,
 				615596431E1E178000F6EE4C /* IRFollowViewController.swift in Sources */,
 				613806861E28C6B50067CFC9 /* IRAnchorModel.swift in Sources */,
+				615DE2031E2E15BA005ADD73 /* IRCollectionCycleCell.swift in Sources */,
 				61A827C11E26048A009C7F5D /* NSDate_Extension.swift in Sources */,
 				61BD50011E1CFF7C001C1462 /* AppDelegate.swift in Sources */,
 				6155964C1E1E178000F6EE4C /* IRBaseTabBarController.swift in Sources */,
@@ -640,6 +651,7 @@
 				613806841E28A7DB0067CFC9 /* IRAnchorGroup.swift in Sources */,
 				611D44D81E1F41D80075E1B6 /* IRPageTitleView.swift in Sources */,
 				6155964B1E1E178000F6EE4C /* IRBaseNavigationController.swift in Sources */,
+				615DE1FE1E2E105E005ADD73 /* IRCycleModel.swift in Sources */,
 				61DB6CBA1E24AA7200134B81 /* IRCollectionHeaderView.swift in Sources */,
 				615040521E2CBF45008FF501 /* IRCycleView.swift in Sources */,
 				611D44DA1E1F44720075E1B6 /* Common.swift in Sources */,
