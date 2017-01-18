@@ -10,13 +10,13 @@ import UIKit
 
 
 
- // MARK:- 定义协议
+// MARK:- 定义协议
  protocol IRPageTitleViewDelegate : class {
     func pageTitleViewDelegate(titleView : IRPageTitleView,selectedIndex index : Int)
 }
 
- // MARK:- 定义常量
-private let kScrollLineHeight : CGFloat = 2
+// MARK:- 定义常量
+private let kScrollLineHeight : CGFloat = 3.0
 private let kNormalColor : (CGFloat,CGFloat,CGFloat) = (85,85,85)
 private let kSelectColor : (CGFloat,CGFloat,CGFloat) = (255,128,0)
 
@@ -25,14 +25,13 @@ private let kSelectColor : (CGFloat,CGFloat,CGFloat) = (255,128,0)
  // MARK:- 定义IRPageTitleView类
 class IRPageTitleView: UIView {
     // MARK:- 定义属性
-    var titles : [String]
-    var currentIndex : Int = 0
-    //定义代理属性
+    fileprivate var titles : [String]
+    fileprivate var currentIndex : Int = 0
     weak var delegate : IRPageTitleViewDelegate?
     
     
     // MARK:- 懒加载属性
-    lazy var scrollView : UIScrollView = {
+    fileprivate lazy var scrollView : UIScrollView = {
         let scrollV = UIScrollView()
         scrollV.showsHorizontalScrollIndicator = false
 //      scrollsToTop == YES的控件滚动返回至顶部
@@ -43,13 +42,15 @@ class IRPageTitleView: UIView {
     }()
     
     /// 滚动的线
-    lazy var scrollLine : UIView = {
+    fileprivate lazy var scrollLine : UIView = {
         let line = UIView()
-        line.backgroundColor = UIColor(r: kSelectColor.0, g: kSelectColor.1, b: kSelectColor.2)
+        line.backgroundColor = UIColor.orange
+        
+
         return line
     }()
     
-    lazy var titleLabels : [UILabel] = [UILabel]()
+    fileprivate lazy var titleLabels : [UILabel] = [UILabel]()
     
     
     // MARK:- 自定义构造函数
@@ -89,18 +90,14 @@ extension IRPageTitleView {
         lineView.frame = CGRect(x: 0, y: frame.height - CGFloat(lineHeight), width: frame.width, height: CGFloat(lineHeight))
         
         addSubview(lineView)
-     
-        
-        
-        //添加scrollLine
-       scrollView.addSubview(scrollLine)
         
         //获取显示的第一个Label
        guard let lbl = titleLabels.first else { return }
         lbl.textColor = UIColor(r: kSelectColor.0, g: kSelectColor.1, b: kSelectColor.2)
-//       let scrollLineHeight = 1.0
         
-       scrollLine.frame = CGRect(x: lbl.frame.origin.x, y: frame.height - CGFloat(1.0), width: lbl.frame.size.width, height: CGFloat(1.0))
+        //添加scrollLine
+        scrollView.addSubview(scrollLine)
+       scrollLine.frame = CGRect(x: lbl.frame.origin.x, y: frame.height - CGFloat(kScrollLineHeight), width: lbl.frame.size.width, height: kScrollLineHeight)
     }
     
     
@@ -140,7 +137,7 @@ extension IRPageTitleView {
 
 // MARK: - 监听Label的点击
 extension IRPageTitleView{
-    func titleLabelClick(tapGes: UITapGestureRecognizer){
+  @objc fileprivate func titleLabelClick(tapGes: UITapGestureRecognizer){
         
         
         //获取当前label
@@ -191,12 +188,14 @@ extension IRPageTitleView{
 //        变化sourceLabel
         let colorDelta = ( kSelectColor.0 - kNormalColor.0,kSelectColor.1 - kNormalColor.1 ,kSelectColor.2 - kNormalColor.2)
         
-        targetLabel.textColor = UIColor(r: kSelectColor.0 - colorDelta.0 * progress, g: kSelectColor.1 - colorDelta.1 * progress, b: kSelectColor.2 - colorDelta.2 * progress)
+        sourceLabel.textColor = UIColor(r: kSelectColor.0 - colorDelta.0 * progress, g: kSelectColor.1 - colorDelta.1 * progress, b: kSelectColor.2 - colorDelta.2 * progress)
         
-        
+//        print("sourceLabel === \(sourceLabel.textColor)")
 //        变化targetLabel
-        sourceLabel.textColor = UIColor(r: kNormalColor.0 + colorDelta.0 * progress, g: kNormalColor.1 + colorDelta.1 * progress, b: kNormalColor.2 + colorDelta.2 * progress)
         
+        targetLabel.textColor = UIColor(r: kNormalColor.0 + colorDelta.0 * progress, g: kNormalColor.1 + colorDelta.1 * progress, b: kNormalColor.2 + colorDelta.2 * progress)
+        
+//        print("targetLabel === \(targetLabel.textColor)")
         
         currentIndex = targetIndex
     }

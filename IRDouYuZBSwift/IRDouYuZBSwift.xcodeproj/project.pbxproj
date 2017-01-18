@@ -37,6 +37,11 @@
 		61BD50081E1CFF7C001C1462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61BD50071E1CFF7C001C1462 /* Assets.xcassets */; };
 		61BD50161E1CFF7C001C1462 /* IRDouYuZBSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD50151E1CFF7C001C1462 /* IRDouYuZBSwiftTests.swift */; };
 		61BD50211E1CFF7C001C1462 /* IRDouYuZBSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD50201E1CFF7C001C1462 /* IRDouYuZBSwiftUITests.swift */; };
+		61CEACA91E2F728000A275F9 /* IRGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CEACA81E2F728000A275F9 /* IRGameViewController.swift */; };
+		61D65F021E2F16CB00993BEA /* IRRecommendGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D65F011E2F16CB00993BEA /* IRRecommendGameView.swift */; };
+		61D65F041E2F16D600993BEA /* IRRecommendGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61D65F031E2F16D600993BEA /* IRRecommendGameView.xib */; };
+		61D65F091E2F468900993BEA /* IRCollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D65F071E2F468900993BEA /* IRCollectionGameCell.swift */; };
+		61D65F0A1E2F468900993BEA /* IRCollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61D65F081E2F468900993BEA /* IRCollectionGameCell.xib */; };
 		61DB6CB71E247D1C00134B81 /* IRRecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DB6CB61E247D1C00134B81 /* IRRecommendViewController.swift */; };
 		61DB6CBA1E24AA7200134B81 /* IRCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DB6CB81E24AA7200134B81 /* IRCollectionHeaderView.swift */; };
 		61DB6CBB1E24AA7200134B81 /* IRCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61DB6CB91E24AA7200134B81 /* IRCollectionHeaderView.xib */; };
@@ -102,6 +107,11 @@
 		61BD501C1E1CFF7C001C1462 /* IRDouYuZBSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IRDouYuZBSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61BD50201E1CFF7C001C1462 /* IRDouYuZBSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRDouYuZBSwiftUITests.swift; sourceTree = "<group>"; };
 		61BD50221E1CFF7C001C1462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61CEACA81E2F728000A275F9 /* IRGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRGameViewController.swift; sourceTree = "<group>"; };
+		61D65F011E2F16CB00993BEA /* IRRecommendGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRRecommendGameView.swift; sourceTree = "<group>"; };
+		61D65F031E2F16D600993BEA /* IRRecommendGameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IRRecommendGameView.xib; sourceTree = "<group>"; };
+		61D65F071E2F468900993BEA /* IRCollectionGameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRCollectionGameCell.swift; sourceTree = "<group>"; };
+		61D65F081E2F468900993BEA /* IRCollectionGameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IRCollectionGameCell.xib; sourceTree = "<group>"; };
 		61DB6CB61E247D1C00134B81 /* IRRecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRRecommendViewController.swift; sourceTree = "<group>"; };
 		61DB6CB81E24AA7200134B81 /* IRCollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRCollectionHeaderView.swift; sourceTree = "<group>"; };
 		61DB6CB91E24AA7200134B81 /* IRCollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IRCollectionHeaderView.xib; sourceTree = "<group>"; };
@@ -247,6 +257,7 @@
 				615596311E1E178000F6EE4C /* Home.storyboard */,
 				6155962E1E1E178000F6EE4C /* IRHomeViewController.swift */,
 				61DB6CB61E247D1C00134B81 /* IRRecommendViewController.swift */,
+				61CEACA81E2F728000A275F9 /* IRGameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -264,6 +275,10 @@
 			children = (
 				61DB6CB81E24AA7200134B81 /* IRCollectionHeaderView.swift */,
 				61DB6CB91E24AA7200134B81 /* IRCollectionHeaderView.xib */,
+				61D65F011E2F16CB00993BEA /* IRRecommendGameView.swift */,
+				61D65F031E2F16D600993BEA /* IRRecommendGameView.xib */,
+				61D65F071E2F468900993BEA /* IRCollectionGameCell.swift */,
+				61D65F081E2F468900993BEA /* IRCollectionGameCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -554,12 +569,14 @@
 				615596461E1E178000F6EE4C /* Home.storyboard in Resources */,
 				61BD50081E1CFF7C001C1462 /* Assets.xcassets in Resources */,
 				61DB6CC61E24CA1F00134B81 /* IRCollectionPrettyCell.xib in Resources */,
+				61D65F041E2F16D600993BEA /* IRRecommendGameView.xib in Resources */,
 				615DE2041E2E15BA005ADD73 /* IRCollectionCycleCell.xib in Resources */,
 				6155964A1E1E178000F6EE4C /* Profile.storyboard in Resources */,
 				615596481E1E178000F6EE4C /* Live.storyboard in Resources */,
 				61DB6CBB1E24AA7200134B81 /* IRCollectionHeaderView.xib in Resources */,
 				61DB6CC01E24C1D600134B81 /* IRCollectionNormalCell.xib in Resources */,
 				615040541E2CBF65008FF501 /* IRCycleView.xib in Resources */,
+				61D65F0A1E2F468900993BEA /* IRCollectionGameCell.xib in Resources */,
 				615596441E1E178000F6EE4C /* Follow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -634,6 +651,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61DB6CB71E247D1C00134B81 /* IRRecommendViewController.swift in Sources */,
+				61CEACA91E2F728000A275F9 /* IRGameViewController.swift in Sources */,
 				6102AAC31E25DEF5004704CF /* NetworkTools.swift in Sources */,
 				61A827BF1E25FF3D009C7F5D /* IRRecommendViewModel.swift in Sources */,
 				615596431E1E178000F6EE4C /* IRFollowViewController.swift in Sources */,
@@ -642,6 +660,7 @@
 				61A827C11E26048A009C7F5D /* NSDate_Extension.swift in Sources */,
 				61BD50011E1CFF7C001C1462 /* AppDelegate.swift in Sources */,
 				6155964C1E1E178000F6EE4C /* IRBaseTabBarController.swift in Sources */,
+				61D65F091E2F468900993BEA /* IRCollectionGameCell.swift in Sources */,
 				61DB6CBF1E24C1D600134B81 /* IRCollectionNormalCell.swift in Sources */,
 				611D44DC1E1F7CC40075E1B6 /* IRPageContentView.swift in Sources */,
 				61DB6CC51E24CA1F00134B81 /* IRCollectionPrettyCell.swift in Sources */,
@@ -657,6 +676,7 @@
 				611D44DA1E1F44720075E1B6 /* Common.swift in Sources */,
 				615596491E1E178000F6EE4C /* IRProfileViewController.swift in Sources */,
 				611D44DE1E1F80CE0075E1B6 /* UIColor_Extension.swift in Sources */,
+				61D65F021E2F16CB00993BEA /* IRRecommendGameView.swift in Sources */,
 				6150404F1E2CB65D008FF501 /* IRCollectionBaseCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

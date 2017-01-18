@@ -15,7 +15,7 @@ class IRHomeViewController: UIViewController {
     
     
     // MARK: - 懒加载属性
-    lazy var pageTitleView : IRPageTitleView = { [weak self] in
+    fileprivate lazy var pageTitleView : IRPageTitleView = { [weak self] in
         let titleFrame = CGRect.init(x: 0, y: kStatusBarHeight+kNavigationBarHeight, width: kScreenWidth, height: kTtitleViewHeight)
         let titles = ["推荐","游戏","娱乐","趣玩"]
         let titleView = IRPageTitleView(frame: titleFrame, titles: titles)
@@ -28,14 +28,15 @@ class IRHomeViewController: UIViewController {
     }()
     
 
-    lazy var pageContentView : IRPageContentView = {[weak self] in
+    fileprivate lazy var pageContentView : IRPageContentView = {[weak self] in
         let contentH = kScreenHeight - kStatusBarHeight - kNavigationBarHeight - kTtitleViewHeight - kTabbarHeight
         let contentFrame = CGRect(x: 0, y: kStatusBarHeight + kNavigationBarHeight + kTtitleViewHeight, width: kScreenWidth, height: contentH)
         
        var childVCs = [ UIViewController ]()
-       childVCs.append(IRRecommendViewController());
+        childVCs.append(IRRecommendViewController());
+        childVCs.append(IRGameViewController());
         
-        for _ in 0..<3{
+        for _ in 0..<2{
            let vc = UIViewController()
             vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             childVCs.append(vc)
@@ -61,7 +62,7 @@ class IRHomeViewController: UIViewController {
 
 // MARK: - 设置UI界面
 extension IRHomeViewController{
-    func setupUI(){
+    fileprivate func setupUI(){
 //        无需调整scrollView的内边距
         automaticallyAdjustsScrollViewInsets = false
         

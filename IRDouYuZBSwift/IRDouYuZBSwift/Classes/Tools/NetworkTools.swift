@@ -23,7 +23,7 @@ class NetworkTools {
     ///   - URLString: 请求地址【url】
     ///   - parameter: 请求参数【可不传】
     ///   - finishedCallback: 回调
-    class func requestData(type : MethodType,URLString : String,parameter:[String:String]? = nil,finishedCallback:@escaping (_ result  : AnyObject)->()){
+    class func requestData(type : MethodType,URLString : String,parameter:[String:String]? = nil,finishedCallback:@escaping (_ result  : Any)->()){
         
         let method = type == .Get ? HTTPMethod.get :  HTTPMethod.post
         
@@ -34,7 +34,7 @@ class NetworkTools {
                 return
             }
             
-            finishedCallback(result as AnyObject)
+            finishedCallback(result)
             
         }
     }

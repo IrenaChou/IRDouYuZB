@@ -29,8 +29,11 @@ class IRAnchorGroup: NSObject {
     lazy var anchors : [IRAnchorModel] = [IRAnchorModel]()
     
     var tag_id : Int?
+    
+    /// 游戏对应的图标
+    var icon_url : String = ""
 //    var push_vertical_screen : String?
-//    var icon_url : String?
+    
 //    var push_nearby : String?
     
     

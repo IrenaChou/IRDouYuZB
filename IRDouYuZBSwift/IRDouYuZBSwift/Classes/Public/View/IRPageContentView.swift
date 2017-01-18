@@ -104,6 +104,12 @@ extension IRPageContentView : UICollectionViewDataSource{
 
 // MARK: - 遵守UICollectionViewDelegate协议
 extension IRPageContentView : UICollectionViewDelegate{
+    /// 开始拖拽
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        isForbidScrollDelegate = false
+        //保存偏移量
+        starContentOffSetX = scrollView.contentOffset.x
+    }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         //判断是否是点击事件
         if isForbidScrollDelegate { return }
@@ -116,12 +122,13 @@ extension IRPageContentView : UICollectionViewDelegate{
         //判断滑动的方向
         let scrollViewWidth = scrollView.bounds.width
         let currentOffSetX = scrollView.contentOffset.x
+//        print("currentOffSetX ==\(currentOffSetX) \n starContentOffSetX == \(starContentOffSetX)")
         if currentOffSetX > starContentOffSetX {
             //左滑
             progress = currentOffSetX / scrollViewWidth - floor(currentOffSetX / scrollViewWidth)
             
             sourceIndex = Int(currentOffSetX / scrollViewWidth)
-            
+            targetIndex = sourceIndex + 1
             if targetIndex >= childVCs.count {
                 targetIndex = childVCs.count - 1
             }
@@ -134,15 +141,16 @@ extension IRPageContentView : UICollectionViewDelegate{
 
         }else{
             //右滑
-            progress = 1.0 - currentOffSetX / scrollViewWidth - floor(currentOffSetX / scrollViewWidth)
+            progress = 1 - (currentOffSetX / scrollViewWidth - floor(currentOffSetX / scrollViewWidth))
             
             targetIndex = Int(currentOffSetX / scrollViewWidth)
             
-            sourceIndex = targetIndex
+            sourceIndex = targetIndex + 1
             if sourceIndex >= childVCs.count {
                 sourceIndex = childVCs.count - 1
             }
 //            print("右\(progress)")
+
         }
         
         
@@ -153,12 +161,7 @@ extension IRPageContentView : UICollectionViewDelegate{
 
     }
     
-    /// 开始拖拽
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        isForbidScrollDelegate = false
-        //保存偏移量
-        starContentOffSetX = scrollView.contentOffset.x
-    }
+
 }
 
 // MARK: - 对外开放的方法
