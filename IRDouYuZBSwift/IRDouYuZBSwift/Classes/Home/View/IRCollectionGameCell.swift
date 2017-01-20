@@ -16,14 +16,14 @@ class IRCollectionGameCell: UICollectionViewCell {
     
     
     // MARK:- 定义属性
-    var group : IRAnchorGroup? {
+    var baseGame : IRBaseGameModel? {
         didSet{
-            guard let url = URL(string: (group?.icon_url)!) else {
+            guard let url = URL(string: (baseGame?.icon_url)!) else {
                 return
             }
             iconImageView.kf.setImage(with: url, placeholder: Image.init(named: "btn_v_more"))
             
-            titleLabel.text = group?.tag_name ?? ""
+            titleLabel.text = baseGame?.tag_name ?? ""
         }
     }
     

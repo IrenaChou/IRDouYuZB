@@ -15,17 +15,8 @@ private let kEdgeInsetMargin : CGFloat = 10
 
 class IRRecommendGameView: UIView {
     // MARK:- 定义数据属性
-    var groups : [IRAnchorGroup]?{
+    var groups : [IRBaseGameModel]?{
         didSet{
-            groups?.removeFirst()
-            groups?.removeFirst()
-            
-            
-            //添加更多组
-            let moreGroup = IRAnchorGroup()
-            moreGroup.tag_name = "更多"
-            groups?.append(moreGroup)
-            
             collectionView.reloadData()
         }
     }
@@ -62,8 +53,8 @@ extension IRRecommendGameView : UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath) as! IRCollectionGameCell
         
-        let group = groups![indexPath.item]
-        cell.group = group
+        let game = groups![indexPath.item]
+        cell.baseGame = game
         
         return cell
     }

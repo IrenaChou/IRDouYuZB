@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="IRAmuseMenuView" customModule="IRDouYuZBSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="207"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="b5Y-DS-fkJ">
+                    <rect key="frame" x="0.0" y="175" width="375" height="37"/>
+                    <color key="pageIndicatorTintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    <color key="currentPageIndicatorTintColor" red="0.98960930110000001" green="0.47392582890000001" blue="0.22041106220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </pageControl>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="MJ5-7R-6mL">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="178"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="gvi-ht-EkI">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="QrY-85-Iae"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="b5Y-DS-fkJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3bD-eB-qoe"/>
+                <constraint firstItem="MJ5-7R-6mL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8Kr-6Y-cHh"/>
+                <constraint firstAttribute="bottom" secondItem="b5Y-DS-fkJ" secondAttribute="bottom" constant="-5" id="JZj-6b-seW"/>
+                <constraint firstItem="MJ5-7R-6mL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bUb-NL-SdM"/>
+                <constraint firstAttribute="trailing" secondItem="MJ5-7R-6mL" secondAttribute="trailing" id="cmH-Of-scN"/>
+                <constraint firstAttribute="trailing" secondItem="b5Y-DS-fkJ" secondAttribute="trailing" id="gn0-EY-U5y"/>
+                <constraint firstItem="b5Y-DS-fkJ" firstAttribute="top" secondItem="MJ5-7R-6mL" secondAttribute="bottom" constant="-3" id="t9V-sa-C6g"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="MJ5-7R-6mL" id="GGL-YR-c9q"/>
+                <outlet property="pageCtrl" destination="b5Y-DS-fkJ" id="4JZ-gh-ssW"/>
+            </connections>
+            <point key="canvasLocation" x="70" y="70.5"/>
+        </view>
+    </objects>
+</document>

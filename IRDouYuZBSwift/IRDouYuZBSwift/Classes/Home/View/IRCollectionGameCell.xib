@@ -6,32 +6,29 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="IRCollectionGameCell" customModule="IRDouYuZBSwift" customModuleProvider="target">
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="IRCollectionGameCell" customModule="IRDouYuZBSwift" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKp-je-NkD">
-                        <rect key="frame" x="24.5" y="65" width="31" height="15"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="15" id="UXu-kQ-6PF"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更多" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKp-je-NkD">
+                        <rect key="frame" x="27.5" y="65" width="25" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_v_more" translatesAutoresizingMaskIntoConstraints="NO" id="XAA-aT-8Gf">
-                        <rect key="frame" x="17.5" y="15" width="45" height="45"/>
+                        <rect key="frame" x="17.5" y="14.5" width="45" height="45"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="XAA-aT-8Gf" secondAttribute="height" multiplier="1:1" id="fD8-bG-T2v"/>
+                            <constraint firstAttribute="width" constant="45" id="075-Sg-pWc"/>
+                            <constraint firstAttribute="height" constant="45" id="3B8-aa-ybC"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -40,14 +37,23 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZkT-TG-NuI">
+                        <rect key="frame" x="0.0" y="90" width="80" height="1"/>
+                        <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="8by-nJ-FtL"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="FKp-je-NkD" secondAttribute="bottom" constant="10" id="HZ8-pO-raS"/>
-                <constraint firstItem="FKp-je-NkD" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="JZP-H3-CqL"/>
-                <constraint firstItem="XAA-aT-8Gf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="QkX-77-E3e"/>
-                <constraint firstItem="XAA-aT-8Gf" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="aPa-4N-ef4"/>
-                <constraint firstItem="FKp-je-NkD" firstAttribute="top" secondItem="XAA-aT-8Gf" secondAttribute="bottom" constant="5" id="kuq-CY-7su"/>
+                <constraint firstAttribute="bottom" secondItem="ZkT-TG-NuI" secondAttribute="bottom" constant="-1" id="Ex6-Zj-Gi4"/>
+                <constraint firstItem="XAA-aT-8Gf" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="GZl-Vx-NDN"/>
+                <constraint firstAttribute="trailing" secondItem="ZkT-TG-NuI" secondAttribute="trailing" id="JOv-tP-RAv"/>
+                <constraint firstItem="ZkT-TG-NuI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Olw-du-yk2"/>
+                <constraint firstItem="XAA-aT-8Gf" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-8" id="Pzh-5M-yoc"/>
+                <constraint firstItem="FKp-je-NkD" firstAttribute="centerX" secondItem="XAA-aT-8Gf" secondAttribute="centerX" id="rSw-bw-8pf"/>
+                <constraint firstItem="FKp-je-NkD" firstAttribute="top" secondItem="XAA-aT-8Gf" secondAttribute="bottom" constant="5" id="v53-7s-fSr"/>
             </constraints>
             <size key="customSize" width="93" height="118"/>
             <connections>

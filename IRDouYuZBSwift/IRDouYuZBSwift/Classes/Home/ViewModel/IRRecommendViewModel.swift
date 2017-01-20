@@ -10,9 +10,8 @@
 import UIKit
 import Alamofire
 
-class IRRecommendViewModel {
+class IRRecommendViewModel : IRBaseViewModel{
     // MARK:- 懒加载属性
-    lazy var anchorGroups : [IRAnchorGroup] = [IRAnchorGroup]()
     lazy var bigDataGroup : IRAnchorGroup = IRAnchorGroup()
     lazy var prettyGroup : IRAnchorGroup = IRAnchorGroup()
     lazy var cycleModels : [IRCycleModel] = [IRCycleModel]()
@@ -56,7 +55,6 @@ extension IRRecommendViewModel {
 //            离开组
             dispatchGroup.leave()
 //            print("请求到0组")
-            
         }
         //请求颜值数据
         //颜值
@@ -82,29 +80,14 @@ extension IRRecommendViewModel {
         }
         
         //请求其它部分的游戏数据
-//        进入组
+        //进入组
         dispatchGroup.enter()
-        NetworkTools.requestData(type: MethodType.Get, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate",parameter: parameters) { (result) in
-            
-            // 将result转成字典类型
-            guard let resuletDict = result as? [String:NSObject] else {return}
-            
-            //根据data的key，获取数组数据
-            guard let dataArray = resuletDict["data"] as? [[String:NSObject]] else { return }
-            
-            //遍历数组，获取字典，将字典转成模型对象
-            for dict in dataArray {
-                let group = IRAnchorGroup(dict: dict)
-                
-                if(group.tag_name == "颜值"){
-                    continue
-                }
-                self.anchorGroups.append(group)
-            }
-//            离开组
+        
+        super.loadData(urlString: "http://capi.douyucdn.cn/api/v1/getHotCate",parameters: parameters ){    
+            // 离开组
             dispatchGroup.leave()
         }
-        
+
 //        判断是否所有数据都被请求到【做所有数据都请求到，同时更新ui】
         dispatchGroup.notify(queue: DispatchQueue.main) {
 //            print("所有数据都请求到")
@@ -135,4 +118,6 @@ extension IRRecommendViewModel {
             finishCallBack()
         }
     }
+    
+    
 }

@@ -14,6 +14,10 @@
 		611D44DE1E1F80CE0075E1B6 /* UIColor_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611D44DD1E1F80CE0075E1B6 /* UIColor_Extension.swift */; };
 		613806841E28A7DB0067CFC9 /* IRAnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613806831E28A7DB0067CFC9 /* IRAnchorGroup.swift */; };
 		613806861E28C6B50067CFC9 /* IRAnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613806851E28C6B50067CFC9 /* IRAnchorModel.swift */; };
+		614E5A8B1E30A941000F5840 /* IRGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614E5A8A1E30A941000F5840 /* IRGameModel.swift */; };
+		614E5A8D1E30AADB000F5840 /* IRBaseGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614E5A8C1E30AADB000F5840 /* IRBaseGameModel.swift */; };
+		614E5A8F1E30BBBE000F5840 /* IRGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614E5A8E1E30BBBE000F5840 /* IRGameViewModel.swift */; };
+		614E5A911E30C8A0000F5840 /* IRAmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614E5A901E30C8A0000F5840 /* IRAmuseViewController.swift */; };
 		6150404F1E2CB65D008FF501 /* IRCollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6150404E1E2CB65D008FF501 /* IRCollectionBaseCell.swift */; };
 		615040521E2CBF45008FF501 /* IRCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615040511E2CBF45008FF501 /* IRCycleView.swift */; };
 		615040541E2CBF65008FF501 /* IRCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 615040531E2CBF65008FF501 /* IRCycleView.xib */; };
@@ -49,6 +53,13 @@
 		61DB6CC01E24C1D600134B81 /* IRCollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61DB6CBE1E24C1D600134B81 /* IRCollectionNormalCell.xib */; };
 		61DB6CC51E24CA1F00134B81 /* IRCollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DB6CC31E24CA1F00134B81 /* IRCollectionPrettyCell.swift */; };
 		61DB6CC61E24CA1F00134B81 /* IRCollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61DB6CC41E24CA1F00134B81 /* IRCollectionPrettyCell.xib */; };
+		61F5D9A91E31EADE00D91799 /* IRAmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F5D9A81E31EADE00D91799 /* IRAmuseViewModel.swift */; };
+		61F5D9AC1E31EF1700D91799 /* IRBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F5D9AB1E31EF1700D91799 /* IRBaseViewModel.swift */; };
+		61F5D9AE1E31F40B00D91799 /* IRBaseAnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F5D9AD1E31F40B00D91799 /* IRBaseAnchorViewController.swift */; };
+		61F5D9B11E32093F00D91799 /* IRAmuseMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F5D9B01E32093F00D91799 /* IRAmuseMenuView.swift */; };
+		61F5D9B31E32096800D91799 /* IRAmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61F5D9B21E32096800D91799 /* IRAmuseMenuView.xib */; };
+		61F5D9B81E3212B300D91799 /* IRAmuseMenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F5D9B61E3212B300D91799 /* IRAmuseMenuViewCell.swift */; };
+		61F5D9B91E3212B300D91799 /* IRAmuseMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61F5D9B71E3212B300D91799 /* IRAmuseMenuViewCell.xib */; };
 		8C0224138F12D7A7405E0CB5 /* Pods_IRDouYuZBSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52965EE2B45CFC1435C88D71 /* Pods_IRDouYuZBSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +89,10 @@
 		611D44DD1E1F80CE0075E1B6 /* UIColor_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor_Extension.swift; sourceTree = "<group>"; };
 		613806831E28A7DB0067CFC9 /* IRAnchorGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRAnchorGroup.swift; sourceTree = "<group>"; };
 		613806851E28C6B50067CFC9 /* IRAnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRAnchorModel.swift; sourceTree = "<group>"; };
+		614E5A8A1E30A941000F5840 /* IRGameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRGameModel.swift; sourceTree = "<group>"; };
+		614E5A8C1E30AADB000F5840 /* IRBaseGameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRBaseGameModel.swift; sourceTree = "<group>"; };
+		614E5A8E1E30BBBE000F5840 /* IRGameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRGameViewModel.swift; sourceTree = "<group>"; };
+		614E5A901E30C8A0000F5840 /* IRAmuseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRAmuseViewController.swift; sourceTree = "<group>"; };
 		6150404E1E2CB65D008FF501 /* IRCollectionBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRCollectionBaseCell.swift; sourceTree = "<group>"; };
 		615040511E2CBF45008FF501 /* IRCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRCycleView.swift; sourceTree = "<group>"; };
 		615040531E2CBF65008FF501 /* IRCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IRCycleView.xib; sourceTree = "<group>"; };
@@ -119,6 +134,13 @@
 		61DB6CBE1E24C1D600134B81 /* IRCollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IRCollectionNormalCell.xib; sourceTree = "<group>"; };
 		61DB6CC31E24CA1F00134B81 /* IRCollectionPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRCollectionPrettyCell.swift; sourceTree = "<group>"; };
 		61DB6CC41E24CA1F00134B81 /* IRCollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IRCollectionPrettyCell.xib; sourceTree = "<group>"; };
+		61F5D9A81E31EADE00D91799 /* IRAmuseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRAmuseViewModel.swift; sourceTree = "<group>"; };
+		61F5D9AB1E31EF1700D91799 /* IRBaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRBaseViewModel.swift; sourceTree = "<group>"; };
+		61F5D9AD1E31F40B00D91799 /* IRBaseAnchorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRBaseAnchorViewController.swift; sourceTree = "<group>"; };
+		61F5D9B01E32093F00D91799 /* IRAmuseMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRAmuseMenuView.swift; sourceTree = "<group>"; };
+		61F5D9B21E32096800D91799 /* IRAmuseMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IRAmuseMenuView.xib; sourceTree = "<group>"; };
+		61F5D9B61E3212B300D91799 /* IRAmuseMenuViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRAmuseMenuViewCell.swift; sourceTree = "<group>"; };
+		61F5D9B71E3212B300D91799 /* IRAmuseMenuViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IRAmuseMenuViewCell.xib; sourceTree = "<group>"; };
 		B77F5DCFBC7DA0A56130513E /* Pods-IRDouYuZBSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRDouYuZBSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-IRDouYuZBSwift/Pods-IRDouYuZBSwift.release.xcconfig"; sourceTree = "<group>"; };
 		E1E5A7CD998ED2E5B610044D /* Pods-IRDouYuZBSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRDouYuZBSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IRDouYuZBSwift/Pods-IRDouYuZBSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,6 +185,7 @@
 			children = (
 				613806831E28A7DB0067CFC9 /* IRAnchorGroup.swift */,
 				613806851E28C6B50067CFC9 /* IRAnchorModel.swift */,
+				614E5A8C1E30AADB000F5840 /* IRBaseGameModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,6 +193,7 @@
 		611D44D61E1F41BA0075E1B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				61F5D9AF1E32092700D91799 /* AmuesMenu */,
 				615040501E2CBF24008FF501 /* 图片轮播 */,
 				611D44D71E1F41D80075E1B6 /* IRPageTitleView.swift */,
 				611D44DB1E1F7CC40075E1B6 /* IRPageContentView.swift */,
@@ -258,6 +282,7 @@
 				6155962E1E1E178000F6EE4C /* IRHomeViewController.swift */,
 				61DB6CB61E247D1C00134B81 /* IRRecommendViewController.swift */,
 				61CEACA81E2F728000A275F9 /* IRGameViewController.swift */,
+				614E5A901E30C8A0000F5840 /* IRAmuseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -266,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				615DE1FD1E2E105E005ADD73 /* IRCycleModel.swift */,
+				614E5A8A1E30A941000F5840 /* IRGameModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -352,6 +378,7 @@
 		6155963E1E1E178000F6EE4C /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				61F5D9AA1E31EF0900D91799 /* ViewModel */,
 				611D44D51E1F41BA0075E1B6 /* Model */,
 				611D44D61E1F41BA0075E1B6 /* View */,
 				6155963F1E1E178000F6EE4C /* Controller */,
@@ -364,6 +391,7 @@
 			children = (
 				615596401E1E178000F6EE4C /* IRBaseNavigationController.swift */,
 				615596411E1E178000F6EE4C /* IRBaseTabBarController.swift */,
+				61F5D9AD1E31F40B00D91799 /* IRBaseAnchorViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -391,7 +419,9 @@
 		61A827BD1E25FEA7009C7F5D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				614E5A8E1E30BBBE000F5840 /* IRGameViewModel.swift */,
 				61A827BE1E25FF3D009C7F5D /* IRRecommendViewModel.swift */,
+				61F5D9A81E31EADE00D91799 /* IRAmuseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -445,6 +475,25 @@
 				61BD50221E1CFF7C001C1462 /* Info.plist */,
 			);
 			path = IRDouYuZBSwiftUITests;
+			sourceTree = "<group>";
+		};
+		61F5D9AA1E31EF0900D91799 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				61F5D9AB1E31EF1700D91799 /* IRBaseViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		61F5D9AF1E32092700D91799 /* AmuesMenu */ = {
+			isa = PBXGroup;
+			children = (
+				61F5D9B01E32093F00D91799 /* IRAmuseMenuView.swift */,
+				61F5D9B21E32096800D91799 /* IRAmuseMenuView.xib */,
+				61F5D9B61E3212B300D91799 /* IRAmuseMenuViewCell.swift */,
+				61F5D9B71E3212B300D91799 /* IRAmuseMenuViewCell.xib */,
+			);
+			name = AmuesMenu;
 			sourceTree = "<group>";
 		};
 		ACEE867C5103CA9A9C05C872 /* Frameworks */ = {
@@ -570,10 +619,12 @@
 				61BD50081E1CFF7C001C1462 /* Assets.xcassets in Resources */,
 				61DB6CC61E24CA1F00134B81 /* IRCollectionPrettyCell.xib in Resources */,
 				61D65F041E2F16D600993BEA /* IRRecommendGameView.xib in Resources */,
+				61F5D9B91E3212B300D91799 /* IRAmuseMenuViewCell.xib in Resources */,
 				615DE2041E2E15BA005ADD73 /* IRCollectionCycleCell.xib in Resources */,
 				6155964A1E1E178000F6EE4C /* Profile.storyboard in Resources */,
 				615596481E1E178000F6EE4C /* Live.storyboard in Resources */,
 				61DB6CBB1E24AA7200134B81 /* IRCollectionHeaderView.xib in Resources */,
+				61F5D9B31E32096800D91799 /* IRAmuseMenuView.xib in Resources */,
 				61DB6CC01E24C1D600134B81 /* IRCollectionNormalCell.xib in Resources */,
 				615040541E2CBF65008FF501 /* IRCycleView.xib in Resources */,
 				61D65F0A1E2F468900993BEA /* IRCollectionGameCell.xib in Resources */,
@@ -653,15 +704,22 @@
 				61DB6CB71E247D1C00134B81 /* IRRecommendViewController.swift in Sources */,
 				61CEACA91E2F728000A275F9 /* IRGameViewController.swift in Sources */,
 				6102AAC31E25DEF5004704CF /* NetworkTools.swift in Sources */,
+				61F5D9A91E31EADE00D91799 /* IRAmuseViewModel.swift in Sources */,
+				61F5D9AE1E31F40B00D91799 /* IRBaseAnchorViewController.swift in Sources */,
 				61A827BF1E25FF3D009C7F5D /* IRRecommendViewModel.swift in Sources */,
 				615596431E1E178000F6EE4C /* IRFollowViewController.swift in Sources */,
 				613806861E28C6B50067CFC9 /* IRAnchorModel.swift in Sources */,
 				615DE2031E2E15BA005ADD73 /* IRCollectionCycleCell.swift in Sources */,
 				61A827C11E26048A009C7F5D /* NSDate_Extension.swift in Sources */,
+				61F5D9B11E32093F00D91799 /* IRAmuseMenuView.swift in Sources */,
 				61BD50011E1CFF7C001C1462 /* AppDelegate.swift in Sources */,
 				6155964C1E1E178000F6EE4C /* IRBaseTabBarController.swift in Sources */,
 				61D65F091E2F468900993BEA /* IRCollectionGameCell.swift in Sources */,
+				614E5A911E30C8A0000F5840 /* IRAmuseViewController.swift in Sources */,
 				61DB6CBF1E24C1D600134B81 /* IRCollectionNormalCell.swift in Sources */,
+				614E5A8D1E30AADB000F5840 /* IRBaseGameModel.swift in Sources */,
+				61F5D9B81E3212B300D91799 /* IRAmuseMenuViewCell.swift in Sources */,
+				614E5A8F1E30BBBE000F5840 /* IRGameViewModel.swift in Sources */,
 				611D44DC1E1F7CC40075E1B6 /* IRPageContentView.swift in Sources */,
 				61DB6CC51E24CA1F00134B81 /* IRCollectionPrettyCell.swift in Sources */,
 				615596451E1E178000F6EE4C /* IRHomeViewController.swift in Sources */,
@@ -671,12 +729,14 @@
 				611D44D81E1F41D80075E1B6 /* IRPageTitleView.swift in Sources */,
 				6155964B1E1E178000F6EE4C /* IRBaseNavigationController.swift in Sources */,
 				615DE1FE1E2E105E005ADD73 /* IRCycleModel.swift in Sources */,
+				614E5A8B1E30A941000F5840 /* IRGameModel.swift in Sources */,
 				61DB6CBA1E24AA7200134B81 /* IRCollectionHeaderView.swift in Sources */,
 				615040521E2CBF45008FF501 /* IRCycleView.swift in Sources */,
 				611D44DA1E1F44720075E1B6 /* Common.swift in Sources */,
 				615596491E1E178000F6EE4C /* IRProfileViewController.swift in Sources */,
 				611D44DE1E1F80CE0075E1B6 /* UIColor_Extension.swift in Sources */,
 				61D65F021E2F16CB00993BEA /* IRRecommendGameView.swift in Sources */,
+				61F5D9AC1E31EF1700D91799 /* IRBaseViewModel.swift in Sources */,
 				6150404F1E2CB65D008FF501 /* IRCollectionBaseCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
