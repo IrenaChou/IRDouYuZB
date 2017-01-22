@@ -35,6 +35,9 @@
 		615DE1FE1E2E105E005ADD73 /* IRCycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615DE1FD1E2E105E005ADD73 /* IRCycleModel.swift */; };
 		615DE2031E2E15BA005ADD73 /* IRCollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615DE2011E2E15BA005ADD73 /* IRCollectionCycleCell.swift */; };
 		615DE2041E2E15BA005ADD73 /* IRCollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 615DE2021E2E15BA005ADD73 /* IRCollectionCycleCell.xib */; };
+		6172F9A51E347CEB003A6E96 /* IRFunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172F9A41E347CEB003A6E96 /* IRFunnyViewController.swift */; };
+		6172F9A71E34941C003A6E96 /* IRFunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172F9A61E34941C003A6E96 /* IRFunnyViewModel.swift */; };
+		6172F9A91E34A13B003A6E96 /* IRBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172F9A81E34A13B003A6E96 /* IRBaseViewController.swift */; };
 		61A827BF1E25FF3D009C7F5D /* IRRecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A827BE1E25FF3D009C7F5D /* IRRecommendViewModel.swift */; };
 		61A827C11E26048A009C7F5D /* NSDate_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A827C01E26048A009C7F5D /* NSDate_Extension.swift */; };
 		61BD50011E1CFF7C001C1462 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD50001E1CFF7C001C1462 /* AppDelegate.swift */; };
@@ -110,6 +113,9 @@
 		615DE1FD1E2E105E005ADD73 /* IRCycleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRCycleModel.swift; sourceTree = "<group>"; };
 		615DE2011E2E15BA005ADD73 /* IRCollectionCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRCollectionCycleCell.swift; sourceTree = "<group>"; };
 		615DE2021E2E15BA005ADD73 /* IRCollectionCycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IRCollectionCycleCell.xib; sourceTree = "<group>"; };
+		6172F9A41E347CEB003A6E96 /* IRFunnyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRFunnyViewController.swift; sourceTree = "<group>"; };
+		6172F9A61E34941C003A6E96 /* IRFunnyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRFunnyViewModel.swift; sourceTree = "<group>"; };
+		6172F9A81E34A13B003A6E96 /* IRBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRBaseViewController.swift; sourceTree = "<group>"; };
 		61A827BE1E25FF3D009C7F5D /* IRRecommendViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRRecommendViewModel.swift; sourceTree = "<group>"; };
 		61A827C01E26048A009C7F5D /* NSDate_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDate_Extension.swift; sourceTree = "<group>"; };
 		61BD4FFD1E1CFF7C001C1462 /* IRDouYuZBSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRDouYuZBSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -283,6 +289,7 @@
 				61DB6CB61E247D1C00134B81 /* IRRecommendViewController.swift */,
 				61CEACA81E2F728000A275F9 /* IRGameViewController.swift */,
 				614E5A901E30C8A0000F5840 /* IRAmuseViewController.swift */,
+				6172F9A41E347CEB003A6E96 /* IRFunnyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -392,6 +399,7 @@
 				615596401E1E178000F6EE4C /* IRBaseNavigationController.swift */,
 				615596411E1E178000F6EE4C /* IRBaseTabBarController.swift */,
 				61F5D9AD1E31F40B00D91799 /* IRBaseAnchorViewController.swift */,
+				6172F9A81E34A13B003A6E96 /* IRBaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -422,6 +430,7 @@
 				614E5A8E1E30BBBE000F5840 /* IRGameViewModel.swift */,
 				61A827BE1E25FF3D009C7F5D /* IRRecommendViewModel.swift */,
 				61F5D9A81E31EADE00D91799 /* IRAmuseViewModel.swift */,
+				6172F9A61E34941C003A6E96 /* IRFunnyViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -722,6 +731,7 @@
 				614E5A8F1E30BBBE000F5840 /* IRGameViewModel.swift in Sources */,
 				611D44DC1E1F7CC40075E1B6 /* IRPageContentView.swift in Sources */,
 				61DB6CC51E24CA1F00134B81 /* IRCollectionPrettyCell.swift in Sources */,
+				6172F9A71E34941C003A6E96 /* IRFunnyViewModel.swift in Sources */,
 				615596451E1E178000F6EE4C /* IRHomeViewController.swift in Sources */,
 				6155964F1E1E4CAE00F6EE4C /* UIBarButtonItem_Extension.swift in Sources */,
 				615596471E1E178000F6EE4C /* IRLiveViewController.swift in Sources */,
@@ -733,6 +743,8 @@
 				61DB6CBA1E24AA7200134B81 /* IRCollectionHeaderView.swift in Sources */,
 				615040521E2CBF45008FF501 /* IRCycleView.swift in Sources */,
 				611D44DA1E1F44720075E1B6 /* Common.swift in Sources */,
+				6172F9A51E347CEB003A6E96 /* IRFunnyViewController.swift in Sources */,
+				6172F9A91E34A13B003A6E96 /* IRBaseViewController.swift in Sources */,
 				615596491E1E178000F6EE4C /* IRProfileViewController.swift in Sources */,
 				611D44DE1E1F80CE0075E1B6 /* UIColor_Extension.swift in Sources */,
 				61D65F021E2F16CB00993BEA /* IRRecommendGameView.swift in Sources */,

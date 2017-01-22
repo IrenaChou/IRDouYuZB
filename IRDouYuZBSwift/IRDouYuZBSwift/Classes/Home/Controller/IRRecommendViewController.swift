@@ -16,13 +16,13 @@ private let krecommendGameViewHeight : CGFloat = 90
 
 class IRRecommendViewController: IRBaseAnchorViewController {
     // MARK:- 懒加载
-    lazy var recommendVM : IRRecommendViewModel = IRRecommendViewModel()
-    lazy var recommendCycleView : IRCycleView = {
+    fileprivate lazy var recommendVM : IRRecommendViewModel = IRRecommendViewModel()
+    fileprivate lazy var recommendCycleView : IRCycleView = {
         let cycleView = IRCycleView.cycleView()
         cycleView.frame = CGRect(x: 0, y: -(kCycleViewHeight+krecommendGameViewHeight), width: kScreenWidth, height: kCycleViewHeight)
         return cycleView
     }()
-    lazy var recommendGameView : IRRecommendGameView = {
+    fileprivate lazy var recommendGameView : IRRecommendGameView = {
         let gameView = IRRecommendGameView.recommendGameView()
         gameView.frame = CGRect(x: 0, y: -krecommendGameViewHeight, width: kScreenWidth, height: krecommendGameViewHeight)
         return gameView
@@ -33,19 +33,19 @@ class IRRecommendViewController: IRBaseAnchorViewController {
 extension IRRecommendViewController{
     override func setupUI(){
         super.setupUI()
-        
+
         //将cycleView添加到collectionView中
         collectView.addSubview(recommendCycleView)
-        
         //将recommendGameView添加到collectionView中
         collectView.addSubview(recommendGameView)
-        
         //设置collectionView的内边距
         collectView.contentInset = UIEdgeInsets(top: kCycleViewHeight+krecommendGameViewHeight, left: 0, bottom: 0, right: 0)
 
-        collectView.register(UINib(nibName: "IRCollectionPrettyCell", bundle: nil), forCellWithReuseIdentifier: kPrettyCellID)
+//        collectView.register(UINib(nibName: "IRCollectionPrettyCell", bundle: nil), forCellWithReuseIdentifier: kPrettyCellID)
 
-        collectView.delegate = self
+//        collectView.delegate = self
+        
+
     }
 }
 
@@ -69,6 +69,9 @@ extension IRRecommendViewController {
             groups.append(moreGroup)
 
             self.recommendGameView.groups = groups
+            
+            //数据请求完成
+            self.loadDataFinish()
         }
 //        请求图片轮播数据
         recommendVM.requestCycleData {

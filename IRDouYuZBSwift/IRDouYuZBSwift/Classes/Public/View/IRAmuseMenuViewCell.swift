@@ -12,6 +12,11 @@ private let kGameCellID : String = "kGameCellID"
 
 class IRAmuseMenuViewCell: UICollectionViewCell {
 
+    var groups : [IRAnchorGroup]?{
+        didSet{
+            collectionView.reloadData()
+        }
+    }
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func awakeFromNib() {
@@ -33,14 +38,18 @@ class IRAmuseMenuViewCell: UICollectionViewCell {
 extension IRAmuseMenuViewCell : UICollectionViewDataSource{
     @available(iOS 6.0, *)
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath) as! IRCollectionGameCell
+        
+        cell.clipsToBounds = true
+        cell.baseGame = groups![indexPath.item]
         
         return cell
     }
 
     @available(iOS 6.0, *)
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       return 8
+        
+       return groups?.count ?? 0
     }
 
     

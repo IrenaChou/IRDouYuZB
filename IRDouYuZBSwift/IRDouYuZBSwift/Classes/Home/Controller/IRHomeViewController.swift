@@ -36,12 +36,7 @@ class IRHomeViewController: UIViewController {
         childVCs.append(IRRecommendViewController());
         childVCs.append(IRGameViewController());
         childVCs.append(IRAmuseViewController());
-        
-
-       let vc = UIViewController()
-        vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
-        childVCs.append(vc)
-
+        childVCs.append(IRFunnyViewController());
         
        let contentV = IRPageContentView(frame: contentFrame, childViewCtrls: childVCs, parentViewCtrl: self)
         

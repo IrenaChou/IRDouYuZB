@@ -41,7 +41,7 @@ class IRAnchorModel: NSObject {
 //    var show_time : String?
 //    var show_status : String?
 //    var jumpUrl : String?
-    init(dict : [String:NSObject]) {
+    init(dict : [String:Any]) {
         super.init()
         setValuesForKeys(dict)
     }

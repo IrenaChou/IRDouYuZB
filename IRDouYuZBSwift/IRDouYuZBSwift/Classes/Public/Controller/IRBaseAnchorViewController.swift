@@ -17,7 +17,7 @@ private let kHeaderViewHeight : CGFloat = 50
 private let kNormalCellID : String = "kNormalCellID"
 private let kHeaderViewID : String = "kHeaderViewID"
 
-class IRBaseAnchorViewController: UIViewController {
+class IRBaseAnchorViewController: IRBaseViewController {
 
     // MARK:- 定义属性
     var baseViewModel : IRBaseViewModel!
@@ -67,10 +67,16 @@ extension IRBaseAnchorViewController{
 
 // MARK: - 设置UI界面的内容
 extension IRBaseAnchorViewController{
-    func setupUI(){
+    override func setupUI(){
+                
+        contentView = collectView
+        
         view.addSubview(collectView)
+        
+        super.setupUI()
     }
 }
+
 // MARK: - 遵守UICollectionViewDataSource协议
 extension IRBaseAnchorViewController : UICollectionViewDataSource{
    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -79,7 +85,7 @@ extension IRBaseAnchorViewController : UICollectionViewDataSource{
         let cell : IRCollectionBaseCell!
         
         cell = collectView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! IRCollectionNormalCell
-        
+    
         cell.anchor = baseViewModel.anchorGroups[indexPath.section].anchors[indexPath.item]
         
         return cell
@@ -98,7 +104,7 @@ extension IRBaseAnchorViewController : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         //取出section的HeaderView
         let headerView = collectView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! IRCollectionHeaderView
-        
+
         headerView.group = baseViewModel.anchorGroups[indexPath.section]
         
         return headerView

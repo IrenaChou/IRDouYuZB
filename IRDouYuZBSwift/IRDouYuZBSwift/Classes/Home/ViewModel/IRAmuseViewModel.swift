@@ -17,6 +17,6 @@ class IRAmuseViewModel : IRBaseViewModel{
 extension IRAmuseViewModel {
     func loadAmuseData(finishCallBack: @escaping ()->()){
         
-        super.loadData(urlString: "http://capi.douyucdn.cn/api/v1/getHotRoom/2", finishCallBack: finishCallBack)
+        self.loadData(urlString: "http://capi.douyucdn.cn/api/v1/getHotRoom/2", finishCallBack: finishCallBack)
     }
 }

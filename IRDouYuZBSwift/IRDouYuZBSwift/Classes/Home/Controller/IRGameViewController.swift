@@ -17,7 +17,7 @@ private let kHeaderViewID : String = "kHeaderViewID"
 private let kCollectHeaderH : CGFloat = 50
 private let kGameViewH : CGFloat = 90
 
-class IRGameViewController: UIViewController {
+class IRGameViewController: IRBaseViewController {
     // MARK:- 懒加载属性
     fileprivate lazy var collectionView : UICollectionView = {[unowned self] in
         //设置collectionView的布局
@@ -75,10 +75,15 @@ class IRGameViewController: UIViewController {
 
 // MARK: - 设置UI数据
 extension IRGameViewController{
-    fileprivate func setupUI(){
+    override func setupUI(){
+        
+        contentView = collectionView
+        
         view.addSubview(collectionView)
         collectionView.addSubview(topHeaderView)
         collectionView.addSubview(gameView)
+        
+        super.setupUI()
     }
 }
 
@@ -92,6 +97,10 @@ extension IRGameViewController {
             
             //展示常用游戏【取前10条数据】
             self.gameView.groups = Array(self.gameViewModel.games[0..<10])
+            
+            //数据请求完成
+            self.loadDataFinish()
+
         }
     }
 }
