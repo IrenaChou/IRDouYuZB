@@ -1,0 +1,543 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		61789B611E35FF4000B84B59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61789B601E35FF4000B84B59 /* AppDelegate.swift */; };
+		61789B631E35FF4000B84B59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61789B621E35FF4000B84B59 /* ViewController.swift */; };
+		61789B661E35FF4000B84B59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61789B641E35FF4000B84B59 /* Main.storyboard */; };
+		61789B681E35FF4000B84B59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61789B671E35FF4000B84B59 /* Assets.xcassets */; };
+		61789B6B1E35FF4000B84B59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61789B691E35FF4000B84B59 /* LaunchScreen.storyboard */; };
+		61789B761E35FF4000B84B59 /* IRVideoCaptureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61789B751E35FF4000B84B59 /* IRVideoCaptureTests.swift */; };
+		61789B811E35FF4000B84B59 /* IRVideoCaptureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61789B801E35FF4000B84B59 /* IRVideoCaptureUITests.swift */; };
+		61789B901E35FF5D00B84B59 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61789B8F1E35FF5D00B84B59 /* AVFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		61789B721E35FF4000B84B59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61789B551E35FF4000B84B59 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61789B5C1E35FF4000B84B59;
+			remoteInfo = IRVideoCapture;
+		};
+		61789B7D1E35FF4000B84B59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61789B551E35FF4000B84B59 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61789B5C1E35FF4000B84B59;
+			remoteInfo = IRVideoCapture;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		61789B5D1E35FF4000B84B59 /* IRVideoCapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRVideoCapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		61789B601E35FF4000B84B59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		61789B621E35FF4000B84B59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		61789B651E35FF4000B84B59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		61789B671E35FF4000B84B59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		61789B6A1E35FF4000B84B59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		61789B6C1E35FF4000B84B59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61789B711E35FF4000B84B59 /* IRVideoCaptureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IRVideoCaptureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		61789B751E35FF4000B84B59 /* IRVideoCaptureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRVideoCaptureTests.swift; sourceTree = "<group>"; };
+		61789B771E35FF4000B84B59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61789B7C1E35FF4000B84B59 /* IRVideoCaptureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IRVideoCaptureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		61789B801E35FF4000B84B59 /* IRVideoCaptureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRVideoCaptureUITests.swift; sourceTree = "<group>"; };
+		61789B821E35FF4000B84B59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61789B8F1E35FF5D00B84B59 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		61789B5A1E35FF4000B84B59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61789B901E35FF5D00B84B59 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61789B6E1E35FF4000B84B59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61789B791E35FF4000B84B59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		61789B541E35FF4000B84B59 = {
+			isa = PBXGroup;
+			children = (
+				61789B5F1E35FF4000B84B59 /* IRVideoCapture */,
+				61789B741E35FF4000B84B59 /* IRVideoCaptureTests */,
+				61789B7F1E35FF4000B84B59 /* IRVideoCaptureUITests */,
+				61789B5E1E35FF4000B84B59 /* Products */,
+				61789B8E1E35FF5D00B84B59 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		61789B5E1E35FF4000B84B59 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				61789B5D1E35FF4000B84B59 /* IRVideoCapture.app */,
+				61789B711E35FF4000B84B59 /* IRVideoCaptureTests.xctest */,
+				61789B7C1E35FF4000B84B59 /* IRVideoCaptureUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		61789B5F1E35FF4000B84B59 /* IRVideoCapture */ = {
+			isa = PBXGroup;
+			children = (
+				61789B601E35FF4000B84B59 /* AppDelegate.swift */,
+				61789B621E35FF4000B84B59 /* ViewController.swift */,
+				61789B641E35FF4000B84B59 /* Main.storyboard */,
+				61789B671E35FF4000B84B59 /* Assets.xcassets */,
+				61789B691E35FF4000B84B59 /* LaunchScreen.storyboard */,
+				61789B6C1E35FF4000B84B59 /* Info.plist */,
+			);
+			path = IRVideoCapture;
+			sourceTree = "<group>";
+		};
+		61789B741E35FF4000B84B59 /* IRVideoCaptureTests */ = {
+			isa = PBXGroup;
+			children = (
+				61789B751E35FF4000B84B59 /* IRVideoCaptureTests.swift */,
+				61789B771E35FF4000B84B59 /* Info.plist */,
+			);
+			path = IRVideoCaptureTests;
+			sourceTree = "<group>";
+		};
+		61789B7F1E35FF4000B84B59 /* IRVideoCaptureUITests */ = {
+			isa = PBXGroup;
+			children = (
+				61789B801E35FF4000B84B59 /* IRVideoCaptureUITests.swift */,
+				61789B821E35FF4000B84B59 /* Info.plist */,
+			);
+			path = IRVideoCaptureUITests;
+			sourceTree = "<group>";
+		};
+		61789B8E1E35FF5D00B84B59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61789B8F1E35FF5D00B84B59 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		61789B5C1E35FF4000B84B59 /* IRVideoCapture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61789B851E35FF4000B84B59 /* Build configuration list for PBXNativeTarget "IRVideoCapture" */;
+			buildPhases = (
+				61789B591E35FF4000B84B59 /* Sources */,
+				61789B5A1E35FF4000B84B59 /* Frameworks */,
+				61789B5B1E35FF4000B84B59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IRVideoCapture;
+			productName = IRVideoCapture;
+			productReference = 61789B5D1E35FF4000B84B59 /* IRVideoCapture.app */;
+			productType = "com.apple.product-type.application";
+		};
+		61789B701E35FF4000B84B59 /* IRVideoCaptureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61789B881E35FF4000B84B59 /* Build configuration list for PBXNativeTarget "IRVideoCaptureTests" */;
+			buildPhases = (
+				61789B6D1E35FF4000B84B59 /* Sources */,
+				61789B6E1E35FF4000B84B59 /* Frameworks */,
+				61789B6F1E35FF4000B84B59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61789B731E35FF4000B84B59 /* PBXTargetDependency */,
+			);
+			name = IRVideoCaptureTests;
+			productName = IRVideoCaptureTests;
+			productReference = 61789B711E35FF4000B84B59 /* IRVideoCaptureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		61789B7B1E35FF4000B84B59 /* IRVideoCaptureUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61789B8B1E35FF4000B84B59 /* Build configuration list for PBXNativeTarget "IRVideoCaptureUITests" */;
+			buildPhases = (
+				61789B781E35FF4000B84B59 /* Sources */,
+				61789B791E35FF4000B84B59 /* Frameworks */,
+				61789B7A1E35FF4000B84B59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61789B7E1E35FF4000B84B59 /* PBXTargetDependency */,
+			);
+			name = IRVideoCaptureUITests;
+			productName = IRVideoCaptureUITests;
+			productReference = 61789B7C1E35FF4000B84B59 /* IRVideoCaptureUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		61789B551E35FF4000B84B59 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = ir;
+				TargetAttributes = {
+					61789B5C1E35FF4000B84B59 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = U3DLB2JAD6;
+						ProvisioningStyle = Automatic;
+					};
+					61789B701E35FF4000B84B59 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 61789B5C1E35FF4000B84B59;
+					};
+					61789B7B1E35FF4000B84B59 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 61789B5C1E35FF4000B84B59;
+					};
+				};
+			};
+			buildConfigurationList = 61789B581E35FF4000B84B59 /* Build configuration list for PBXProject "IRVideoCapture" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 61789B541E35FF4000B84B59;
+			productRefGroup = 61789B5E1E35FF4000B84B59 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				61789B5C1E35FF4000B84B59 /* IRVideoCapture */,
+				61789B701E35FF4000B84B59 /* IRVideoCaptureTests */,
+				61789B7B1E35FF4000B84B59 /* IRVideoCaptureUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		61789B5B1E35FF4000B84B59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61789B6B1E35FF4000B84B59 /* LaunchScreen.storyboard in Resources */,
+				61789B681E35FF4000B84B59 /* Assets.xcassets in Resources */,
+				61789B661E35FF4000B84B59 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61789B6F1E35FF4000B84B59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61789B7A1E35FF4000B84B59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		61789B591E35FF4000B84B59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61789B631E35FF4000B84B59 /* ViewController.swift in Sources */,
+				61789B611E35FF4000B84B59 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61789B6D1E35FF4000B84B59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61789B761E35FF4000B84B59 /* IRVideoCaptureTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61789B781E35FF4000B84B59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61789B811E35FF4000B84B59 /* IRVideoCaptureUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		61789B731E35FF4000B84B59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61789B5C1E35FF4000B84B59 /* IRVideoCapture */;
+			targetProxy = 61789B721E35FF4000B84B59 /* PBXContainerItemProxy */;
+		};
+		61789B7E1E35FF4000B84B59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61789B5C1E35FF4000B84B59 /* IRVideoCapture */;
+			targetProxy = 61789B7D1E35FF4000B84B59 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		61789B641E35FF4000B84B59 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61789B651E35FF4000B84B59 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		61789B691E35FF4000B84B59 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61789B6A1E35FF4000B84B59 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		61789B831E35FF4000B84B59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		61789B841E35FF4000B84B59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		61789B861E35FF4000B84B59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U3DLB2JAD6;
+				INFOPLIST_FILE = IRVideoCapture/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ir.test.IRVideoCapture;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		61789B871E35FF4000B84B59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U3DLB2JAD6;
+				INFOPLIST_FILE = IRVideoCapture/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ir.test.IRVideoCapture;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		61789B891E35FF4000B84B59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = IRVideoCaptureTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ir.test.IRVideoCaptureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IRVideoCapture.app/IRVideoCapture";
+			};
+			name = Debug;
+		};
+		61789B8A1E35FF4000B84B59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = IRVideoCaptureTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ir.test.IRVideoCaptureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IRVideoCapture.app/IRVideoCapture";
+			};
+			name = Release;
+		};
+		61789B8C1E35FF4000B84B59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = IRVideoCaptureUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ir.test.IRVideoCaptureUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = IRVideoCapture;
+			};
+			name = Debug;
+		};
+		61789B8D1E35FF4000B84B59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = IRVideoCaptureUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ir.test.IRVideoCaptureUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = IRVideoCapture;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		61789B581E35FF4000B84B59 /* Build configuration list for PBXProject "IRVideoCapture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61789B831E35FF4000B84B59 /* Debug */,
+				61789B841E35FF4000B84B59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61789B851E35FF4000B84B59 /* Build configuration list for PBXNativeTarget "IRVideoCapture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61789B861E35FF4000B84B59 /* Debug */,
+				61789B871E35FF4000B84B59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		61789B881E35FF4000B84B59 /* Build configuration list for PBXNativeTarget "IRVideoCaptureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61789B891E35FF4000B84B59 /* Debug */,
+				61789B8A1E35FF4000B84B59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		61789B8B1E35FF4000B84B59 /* Build configuration list for PBXNativeTarget "IRVideoCaptureUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61789B8C1E35FF4000B84B59 /* Debug */,
+				61789B8D1E35FF4000B84B59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 61789B551E35FF4000B84B59 /* Project object */;
+}
