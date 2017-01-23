@@ -16,14 +16,9 @@ class IRBaseTabBarController: UITabBarController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         UITabBar.appearance().tintColor = UIColor.orange
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
     /// 为tabBarController添加子控制器
    private func childViewControllersSetup(){
@@ -35,7 +30,7 @@ class IRBaseTabBarController: UITabBarController {
         
         let controlles = [ homeNavCtrl,columnNavCtrl,liveNavCtrl,userNavCtrl ]
         
-        self.viewControllers = controlles
+        viewControllers = controlles
     }
     
     /// 创建子控制器
@@ -51,7 +46,9 @@ class IRBaseTabBarController: UITabBarController {
     
         let rootCtrl = sb.instantiateInitialViewController()!
         let navCtrl = IRBaseNavigationController(rootViewController: rootCtrl)
-        
+    
+    
+    
         navCtrl.tabBarItem.image = UIImage.init(named: barImageName+"_normal")
         navCtrl.tabBarItem.selectedImage = UIImage.init(named: barImageName+"_selected")
         navCtrl.tabBarItem.title = barTitleName

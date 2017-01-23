@@ -41,11 +41,7 @@ extension IRRecommendViewController{
         //设置collectionView的内边距
         collectView.contentInset = UIEdgeInsets(top: kCycleViewHeight+krecommendGameViewHeight, left: 0, bottom: 0, right: 0)
 
-//        collectView.register(UINib(nibName: "IRCollectionPrettyCell", bundle: nil), forCellWithReuseIdentifier: kPrettyCellID)
-
-//        collectView.delegate = self
-        
-
+        collectView.register(UINib(nibName: "IRCollectionPrettyCell", bundle: nil), forCellWithReuseIdentifier: kPrettyCellID)
     }
 }
 
@@ -54,24 +50,24 @@ extension IRRecommendViewController {
     override func loadData(){
         baseViewModel = recommendVM
         
-        recommendVM.requestData {
-            self.collectView.reloadData()
+        recommendVM.requestData {[weak self] in
+            self?.collectView.reloadData()
             
             //将推荐数据传递给gameView
-            var groups = self.recommendVM.anchorGroups
-            groups.removeFirst()
-            groups.removeFirst()
+            var groups = self?.recommendVM.anchorGroups
+            groups!.removeFirst()
+            groups!.removeFirst()
             
             
             //添加更多组
             let moreGroup = IRAnchorGroup()
             moreGroup.tag_name = "更多"
-            groups.append(moreGroup)
+            groups!.append(moreGroup)
 
-            self.recommendGameView.groups = groups
+            self?.recommendGameView.groups = groups
             
             //数据请求完成
-            self.loadDataFinish()
+            self?.loadDataFinish()
         }
 //        请求图片轮播数据
         recommendVM.requestCycleData {

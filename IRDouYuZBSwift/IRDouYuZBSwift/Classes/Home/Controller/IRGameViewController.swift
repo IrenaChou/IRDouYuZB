@@ -19,7 +19,7 @@ private let kGameViewH : CGFloat = 90
 
 class IRGameViewController: IRBaseViewController {
     // MARK:- 懒加载属性
-    fileprivate lazy var collectionView : UICollectionView = {[unowned self] in
+    fileprivate lazy var collectionView : UICollectionView = {[weak self] in
         //设置collectionView的布局
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: kItemW, height: kItemH)
@@ -32,7 +32,7 @@ class IRGameViewController: IRBaseViewController {
         layout.headerReferenceSize = CGSize(width: kScreenWidth, height: kCollectHeaderH)
         
 
-        let colView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
+        let colView = UICollectionView(frame: (self?.view.bounds)!, collectionViewLayout: layout)
          colView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
          colView.register(UINib(nibName: "IRCollectionGameCell", bundle: nil), forCellWithReuseIdentifier: kGameCellID)
         colView.dataSource = self

@@ -12,9 +12,9 @@ class IRBaseViewController: UIViewController {
     
     var contentView : UIView?
     
-    fileprivate lazy var animalImageView : UIImageView = {[unowned self] in
+    fileprivate lazy var animalImageView : UIImageView = {[weak self] in
         let imgView = UIImageView(image: UIImage(named: "img_loading_1"))
-        imgView.center = self.view.center
+        imgView.center = (self?.view.center)!
         imgView.animationImages =
             [UIImage(named: "img_loading_1")!,
              UIImage(named: "img_loading_2")!,
@@ -29,29 +29,25 @@ class IRBaseViewController: UIViewController {
         
         return imgView
     }()
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        setupUI()
-    }
 
 }
 extension IRBaseViewController{
     func setupUI(){
         contentView?.isHidden = true
         
-        view.backgroundColor = UIColor(r: 245, g: 245, b: 245)
-        
         view.addSubview(animalImageView)
+        
+        view.backgroundColor =  UIColor(r: 245, g: 245, b: 245)
         
         animalImageView.startAnimating()
     }
     
     func loadDataFinish(){
         animalImageView.stopAnimating()
-        
         animalImageView.isHidden = true
         
+        animalImageView.removeFromSuperview()
+
         contentView!.isHidden = false
     }
 }

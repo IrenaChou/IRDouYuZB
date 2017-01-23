@@ -35,6 +35,8 @@
 		615DE1FE1E2E105E005ADD73 /* IRCycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615DE1FD1E2E105E005ADD73 /* IRCycleModel.swift */; };
 		615DE2031E2E15BA005ADD73 /* IRCollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615DE2011E2E15BA005ADD73 /* IRCollectionCycleCell.swift */; };
 		615DE2041E2E15BA005ADD73 /* IRCollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 615DE2021E2E15BA005ADD73 /* IRCollectionCycleCell.xib */; };
+		6165A1591E35CFF30077B6C3 /* IRRoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6165A1581E35CFF30077B6C3 /* IRRoomShowViewController.swift */; };
+		6165A15B1E35D0290077B6C3 /* IRRoomNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6165A15A1E35D0290077B6C3 /* IRRoomNormalViewController.swift */; };
 		6172F9A51E347CEB003A6E96 /* IRFunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172F9A41E347CEB003A6E96 /* IRFunnyViewController.swift */; };
 		6172F9A71E34941C003A6E96 /* IRFunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172F9A61E34941C003A6E96 /* IRFunnyViewModel.swift */; };
 		6172F9A91E34A13B003A6E96 /* IRBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172F9A81E34A13B003A6E96 /* IRBaseViewController.swift */; };
@@ -113,6 +115,8 @@
 		615DE1FD1E2E105E005ADD73 /* IRCycleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRCycleModel.swift; sourceTree = "<group>"; };
 		615DE2011E2E15BA005ADD73 /* IRCollectionCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRCollectionCycleCell.swift; sourceTree = "<group>"; };
 		615DE2021E2E15BA005ADD73 /* IRCollectionCycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IRCollectionCycleCell.xib; sourceTree = "<group>"; };
+		6165A1581E35CFF30077B6C3 /* IRRoomShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRRoomShowViewController.swift; sourceTree = "<group>"; };
+		6165A15A1E35D0290077B6C3 /* IRRoomNormalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRRoomNormalViewController.swift; sourceTree = "<group>"; };
 		6172F9A41E347CEB003A6E96 /* IRFunnyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRFunnyViewController.swift; sourceTree = "<group>"; };
 		6172F9A61E34941C003A6E96 /* IRFunnyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRFunnyViewModel.swift; sourceTree = "<group>"; };
 		6172F9A81E34A13B003A6E96 /* IRBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRBaseViewController.swift; sourceTree = "<group>"; };
@@ -230,6 +234,7 @@
 				615596421E1E178000F6EE4C /* Tools */,
 				6155963E1E1E178000F6EE4C /* Public */,
 				6155962C1E1E178000F6EE4C /* Home */,
+				6165A1541E35CF8F0077B6C3 /* Room */,
 				615596261E1E178000F6EE4C /* Follow */,
 				615596321E1E178000F6EE4C /* Live */,
 				615596381E1E178000F6EE4C /* Profile */,
@@ -422,6 +427,39 @@
 				61A827C01E26048A009C7F5D /* NSDate_Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		6165A1541E35CF8F0077B6C3 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				6165A1551E35CF8F0077B6C3 /* Controller */,
+				6165A1561E35CF8F0077B6C3 /* Model */,
+				6165A1571E35CF8F0077B6C3 /* View */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		6165A1551E35CF8F0077B6C3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6165A1581E35CFF30077B6C3 /* IRRoomShowViewController.swift */,
+				6165A15A1E35D0290077B6C3 /* IRRoomNormalViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6165A1561E35CF8F0077B6C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6165A1571E35CF8F0077B6C3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		61A827BD1E25FEA7009C7F5D /* ViewModel */ = {
@@ -720,6 +758,7 @@
 				613806861E28C6B50067CFC9 /* IRAnchorModel.swift in Sources */,
 				615DE2031E2E15BA005ADD73 /* IRCollectionCycleCell.swift in Sources */,
 				61A827C11E26048A009C7F5D /* NSDate_Extension.swift in Sources */,
+				6165A15B1E35D0290077B6C3 /* IRRoomNormalViewController.swift in Sources */,
 				61F5D9B11E32093F00D91799 /* IRAmuseMenuView.swift in Sources */,
 				61BD50011E1CFF7C001C1462 /* AppDelegate.swift in Sources */,
 				6155964C1E1E178000F6EE4C /* IRBaseTabBarController.swift in Sources */,
@@ -748,6 +787,7 @@
 				615596491E1E178000F6EE4C /* IRProfileViewController.swift in Sources */,
 				611D44DE1E1F80CE0075E1B6 /* UIColor_Extension.swift in Sources */,
 				61D65F021E2F16CB00993BEA /* IRRecommendGameView.swift in Sources */,
+				6165A1591E35CFF30077B6C3 /* IRRoomShowViewController.swift in Sources */,
 				61F5D9AC1E31EF1700D91799 /* IRBaseViewModel.swift in Sources */,
 				6150404F1E2CB65D008FF501 /* IRCollectionBaseCell.swift in Sources */,
 			);

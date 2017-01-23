@@ -8,28 +8,32 @@
 
 import UIKit
 
-class IRRoomNormalViewController: UIViewController {
+class IRRoomNormalViewController: UIViewController,UIGestureRecognizerDelegate {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        view.backgroundColor = UIColor.orange
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //隐藏导航栏
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        
+//        //保持返回手势不失效
+//        navigationController?.interactivePopGestureRecognizer?.delegate = self
+//        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
     }
-    */
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        //显示导航栏
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+}
 
+extension IRRoomNormalViewController{
+    
 }

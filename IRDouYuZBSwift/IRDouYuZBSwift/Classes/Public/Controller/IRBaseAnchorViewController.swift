@@ -23,7 +23,7 @@ class IRBaseAnchorViewController: IRBaseViewController {
     var baseViewModel : IRBaseViewModel!
     
     // MARK:- 懒加载属性
-    lazy var collectView:UICollectionView = {[unowned self] in
+    lazy var collectView:UICollectionView = {[weak self] in
         //创建部局
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: kItemWidth, height: kNormalItemHeight)
@@ -35,8 +35,9 @@ class IRBaseAnchorViewController: IRBaseViewController {
         layout.headerReferenceSize = CGSize(width: kScreenWidth, height: kHeaderViewHeight)
         
         //创建UICollectionView
-        let collectV = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
+        let collectV = UICollectionView(frame: (self?.view.bounds)!, collectionViewLayout: layout)
         collectV.dataSource = self
+        collectV.delegate = self
         collectV.backgroundColor = UIColor.white
         
         //让collectionView随着父控件拉伸
@@ -74,6 +75,27 @@ extension IRBaseAnchorViewController{
         view.addSubview(collectView)
         
         super.setupUI()
+    }
+}
+
+
+// MARK: - 遵守UICollectionView代理协议
+extension IRBaseAnchorViewController : UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let anchor = baseViewModel.anchorGroups[indexPath.section].anchors[indexPath.item]
+        //显示相应的控制器
+        anchor.isVertical == 0 ? pushNormalRootVc() : presentShowRoomVc()
+    }
+    
+     private func presentShowRoomVc(){
+        let showRoomVc = IRRoomShowViewController()
+        present(showRoomVc, animated: true)
+    }
+    
+    private func pushNormalRootVc(){
+        let normalRoomVc = IRRoomNormalViewController()
+        navigationController?.pushViewController(normalRoomVc, animated: true)
     }
 }
 
