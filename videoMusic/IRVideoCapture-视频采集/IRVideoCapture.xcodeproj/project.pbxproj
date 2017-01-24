@@ -520,6 +520,7 @@
 				61789B871E35FF4000B84B59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61789B881E35FF4000B84B59 /* Build configuration list for PBXNativeTarget "IRVideoCaptureTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +529,7 @@
 				61789B8A1E35FF4000B84B59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61789B8B1E35FF4000B84B59 /* Build configuration list for PBXNativeTarget "IRVideoCaptureUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +538,7 @@
 				61789B8D1E35FF4000B84B59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -35,6 +35,8 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSCameraUsageDescription</key>
-	<string>此程序需要您的像机权限</string>
+	<string>此程序需要您的相机权限</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>此程序需要您的话筒权限</string>
 </dict>
 </plist>
