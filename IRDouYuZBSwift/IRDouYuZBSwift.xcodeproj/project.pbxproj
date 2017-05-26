@@ -623,6 +623,7 @@
 				TargetAttributes = {
 					61BD4FFC1E1CFF7C001C1462 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = U3DLB2JAD6;
 						ProvisioningStyle = Automatic;
 					};
 					61BD50101E1CFF7C001C1462 = {
@@ -923,7 +924,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U3DLB2JAD6;
 				INFOPLIST_FILE = IRDouYuZBSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -940,7 +941,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U3DLB2JAD6;
 				INFOPLIST_FILE = IRDouYuZBSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

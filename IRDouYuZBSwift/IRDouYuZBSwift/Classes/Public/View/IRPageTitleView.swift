@@ -17,8 +17,10 @@ import UIKit
 
 // MARK:- 定义常量
 private let kScrollLineHeight : CGFloat = 3.0
+private let kScrollLineWidth : CGFloat = 30.0
 private let kNormalColor : (CGFloat,CGFloat,CGFloat) = (85,85,85)
 private let kSelectColor : (CGFloat,CGFloat,CGFloat) = (255,128,0)
+
 
 
 
@@ -29,6 +31,21 @@ class IRPageTitleView: UIView {
     fileprivate var currentIndex : Int = 0
     weak var delegate : IRPageTitleViewDelegate?
     
+    lazy var gradentLayzer : CAGradientLayer = {
+        let topColor = UIColor.yellow
+        let buttomColor = UIColor.red
+        
+        //将颜色和颜色的位置定义在数组内
+        let gradientColors: [CGColor] = [topColor.cgColor, buttomColor.cgColor]
+        
+        //创建CAGradientLayer实例并设置参数
+        let gradientLayer: CAGradientLayer = CAGradientLayer()
+        gradientLayer.colors = gradientColors
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+        
+        return gradientLayer;
+    }()
     
     // MARK:- 懒加载属性
     fileprivate lazy var scrollView : UIScrollView = {
@@ -40,6 +57,7 @@ class IRPageTitleView: UIView {
         scrollV.bounces = false
         return scrollV
     }()
+    
     
     /// 滚动的线
     fileprivate lazy var scrollLine : UIView = {
@@ -97,7 +115,14 @@ extension IRPageTitleView {
         
         //添加scrollLine
         scrollView.addSubview(scrollLine)
-       scrollLine.frame = CGRect(x: lbl.frame.origin.x, y: frame.height - CGFloat(kScrollLineHeight), width: lbl.frame.size.width, height: kScrollLineHeight)
+        
+        
+//       scrollLine.frame = CGRect(x: lbl.frame.origin.x, y: frame.height - CGFloat(kScrollLineHeight), width: lbl.frame.size.width, height: kScrollLineHeight)
+        
+        //update
+        scrollLine.frame = CGRect(x: lbl.frame.origin.x, y: frame.height - CGFloat(kScrollLineHeight), width: kScrollLineWidth, height: kScrollLineHeight)
+        scrollLine.center = CGPoint(x: lbl.center.x, y: scrollLine.center.y)
+
     }
     
     
@@ -173,6 +198,13 @@ extension IRPageTitleView{
 
 // MARK: - 对外开放方法
 extension IRPageTitleView{
+    
+    /// 当滑动的时候会执行此方法
+    ///
+    /// - Parameters:
+    ///   - progress: 进度
+    ///   - sourceIndex: 原index
+    ///   - targetIndex: 目标index
     func setTitleWith(progress: CGFloat,sourceIndex: Int,targetIndex: Int)  {
         let sourceLabel = titleLabels[sourceIndex]
         let targetLabel = titleLabels[targetIndex]
@@ -181,7 +213,13 @@ extension IRPageTitleView{
         //总滑动的距离
         let moveTotalX = targetLabel.frame.origin.x - sourceLabel.frame.origin.x
         let moveX = moveTotalX * progress
-        scrollLine.frame.origin.x = sourceLabel.frame.origin.x + moveX
+
+//        scrollLine.frame.origin.x = sourceLabel.frame.origin.x + moveX
+        
+//        scrollLine.center = CGPoint(x: sourceLabel.center.x, y: scrollLine.center.y)
+
+        // 判断移动的时候线变长 update
+        scrollLine.frame.size.width = sourceLabel.frame.origin.x + moveX + kScrollLineWidth
         
         //颜色渐变
         //取出变化的范围
@@ -195,8 +233,14 @@ extension IRPageTitleView{
         
         targetLabel.textColor = UIColor(r: kNormalColor.0 + colorDelta.0 * progress, g: kNormalColor.1 + colorDelta.1 * progress, b: kNormalColor.2 + colorDelta.2 * progress)
         
-//        print("targetLabel === \(targetLabel.textColor)")
         
+//        print("targetLabel === \(targetLabel.textColor)")
+        //设置其frame以及插入view的layer
+        self.gradentLayzer.frame = scrollLine.bounds
+        scrollLine.layer.insertSublayer(self.gradentLayzer, at: 0)
+
+       
+        //渐变
         currentIndex = targetIndex
     }
 }

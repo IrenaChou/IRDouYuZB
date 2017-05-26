@@ -23,6 +23,7 @@ extension IRFunnyViewController{
         //去除组
         layout.headerReferenceSize = CGSize.zero
         collectView.contentInset = UIEdgeInsets(top: kTopMargin, left: 0, bottom: 0, right: 0)
+        
     }
     
 

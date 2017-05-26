@@ -96,7 +96,10 @@ extension IRHomeViewController: IRPageTitleViewDelegate{
 
 // MARK: - 遵守IRPageContentViewDelegate协议
 extension IRHomeViewController : IRPageContentViewDelegate{
+    
     func pageContentView(pageContentView: IRPageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        
         pageTitleView.setTitleWith(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+        
     }
 }
