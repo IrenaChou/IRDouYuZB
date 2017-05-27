@@ -29,18 +29,20 @@ class IRPageTitleView: UIView {
     // MARK:- 定义属性
     fileprivate var titles : [String]
     fileprivate var currentIndex : Int = 0
+    fileprivate var margin : CGFloat = 0
+    
+    
     weak var delegate : IRPageTitleViewDelegate?
     
+    
+    let gradientColors: [CGColor] = [UIColor.yellow.cgColor, UIColor.red.cgColor,UIColor.yellow.cgColor, UIColor.red.cgColor]
+    
+
     lazy var gradentLayzer : CAGradientLayer = {
-        let topColor = UIColor.yellow
-        let buttomColor = UIColor.red
-        
-        //将颜色和颜色的位置定义在数组内
-        let gradientColors: [CGColor] = [topColor.cgColor, buttomColor.cgColor]
-        
+
         //创建CAGradientLayer实例并设置参数
         let gradientLayer: CAGradientLayer = CAGradientLayer()
-        gradientLayer.colors = gradientColors
+        gradientLayer.colors = self.gradientColors
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
         gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
         
@@ -62,7 +64,7 @@ class IRPageTitleView: UIView {
     /// 滚动的线
     fileprivate lazy var scrollLine : UIView = {
         let line = UIView()
-        line.backgroundColor = UIColor.orange
+        line.backgroundColor = UIColor.yellow
         
 
         return line
@@ -110,18 +112,28 @@ extension IRPageTitleView {
         addSubview(lineView)
         
         //获取显示的第一个Label
-       guard let lbl = titleLabels.first else { return }
-        lbl.textColor = UIColor(r: kSelectColor.0, g: kSelectColor.1, b: kSelectColor.2)
+       guard let firstLbl = titleLabels.first else { return }
         
-        //添加scrollLine
-        scrollView.addSubview(scrollLine)
+        firstLbl.textColor = UIColor(r: kSelectColor.0, g: kSelectColor.1, b: kSelectColor.2)
+
         
+        let templabel = UILabel(frame: CGRect(x: 0, y: 0, width: 1000, height: 1000))
+        templabel.text = firstLbl.text;
+        templabel.sizeToFit()
+        margin = firstLbl.frame.width / 2 - templabel.frame.width / 2
         
+
+        scrollLine.frame = CGRect(x: (firstLbl.frame.width - templabel.frame.width)*0.5 , y: frame.height - kScrollLineHeight, width: templabel.frame.width, height: kScrollLineHeight)
+
 //       scrollLine.frame = CGRect(x: lbl.frame.origin.x, y: frame.height - CGFloat(kScrollLineHeight), width: lbl.frame.size.width, height: kScrollLineHeight)
         
         //update
-        scrollLine.frame = CGRect(x: lbl.frame.origin.x, y: frame.height - CGFloat(kScrollLineHeight), width: kScrollLineWidth, height: kScrollLineHeight)
-        scrollLine.center = CGPoint(x: lbl.center.x, y: scrollLine.center.y)
+//        scrollLine.frame = CGRect(x: firstLbl.frame.origin.x, y: frame.height - CGFloat(kScrollLineHeight), width: kScrollLineWidth, height: kScrollLineHeight)
+        
+        //添加scrollLine
+        scrollView.addSubview(scrollLine)
+
+//        scrollLine.center = CGPoint(x: firstLbl.center.x, y: scrollLine.center.y)
 
     }
     
@@ -167,6 +179,7 @@ extension IRPageTitleView{
         
         //获取当前label
         guard let currentLabel = tapGes.view as? UILabel else { return }
+    
         //获取之前的label
         let oldLabel = titleLabels[currentIndex]
 
@@ -181,11 +194,14 @@ extension IRPageTitleView{
         
         //保存最新Label下标
         currentIndex = currentLabel.tag
-
-        let scrollLineX = CGFloat(currentIndex) * currentLabel.frame.width
+    
+//        let scrollLineX = CGFloat(currentIndex) * currentLabel.frame.width
+    
+    
         //调整scrollLine的frame
         UIView.animate(withDuration: 0.15) {
-            self.scrollLine.frame.origin.x = scrollLineX
+//            self.scrollLine.frame.origin.x = scrollLineX
+            self.scrollLine.center = CGPoint(x: currentLabel.center.x, y: self.scrollLine.center.y)
         }
         
         //通知代理
@@ -219,7 +235,60 @@ extension IRPageTitleView{
 //        scrollLine.center = CGPoint(x: sourceLabel.center.x, y: scrollLine.center.y)
 
         // 判断移动的时候线变长 update
-        scrollLine.frame.size.width = sourceLabel.frame.origin.x + moveX + kScrollLineWidth
+//        scrollLine.frame.size.width = sourceLabel.frame.origin.x + moveX + kScrollLineWidth
+
+        //处理下划线变长变短
+        let templabel = UILabel(frame: CGRect(x: 0, y: 0, width: 1000, height: 1000))
+        templabel.text = sourceLabel.text;
+        templabel.sizeToFit()
+
+        
+        let isLimit : Bool = moveX == targetLabel.frame.origin.x - sourceLabel.frame.origin.x
+        
+        if !isLimit {
+            
+            if moveX > 0  {
+                
+                scrollLine.frame.size.width = templabel.frame.size.width + (templabel.frame.size.width + self.margin * 2) * progress * 2
+                
+                //判定下划线是否跳跃
+                if progress < 0.5 {
+                    print("大")
+                    scrollLine.backgroundColor = UIColor.clear
+                    self.gradentLayzer.colors = [UIColor.yellow.cgColor,UIColor.red.cgColor]
+                    
+                    scrollLine.frame.size.width = templabel.frame.size.width + (templabel.frame.size.width + self.margin * 2) * progress * 2
+                    scrollLine.frame.origin.x = sourceLabel.frame.origin.x + margin
+                }else{
+                    print("小")
+//                    scrollLine.backgroundColor = UIColor.orange
+                    self.gradentLayzer.colors = [UIColor.clear.cgColor]
+                    scrollLine.backgroundColor = UIColor(cgColor: self.gradientColors[currentIndex])
+                    
+                    scrollLine.frame.size.width = templabel.frame.size.width + (templabel.frame.size.width + self.margin * 2) - (templabel.frame.size.width + self.margin * 2) * (progress * 2 - 1)
+                    scrollLine.frame.origin.x = sourceLabel.frame.origin.x + margin + (templabel.frame.size.width + self.margin * 2) * (progress * 2 - 1)
+                }
+                
+            }else{
+                
+                if progress < 0.5 {
+                    scrollLine.backgroundColor = UIColor.clear
+                    self.gradentLayzer.colors = [UIColor.yellow.cgColor,UIColor.red.cgColor]
+
+                    
+                    scrollLine.frame.size.width = templabel.frame.size.width + (templabel.frame.size.width + self.margin * 2) * progress * 2
+                    scrollLine.frame.origin.x = targetLabel.frame.origin.x + margin - (templabel.frame.size.width + self.margin * 2) * (progress * 2 - 1)
+                    
+                }else{
+                    self.gradentLayzer.colors = [UIColor.clear.cgColor]
+                    scrollLine.backgroundColor = UIColor(cgColor: self.gradientColors[currentIndex])
+
+                    scrollLine.frame.size.width = templabel.frame.size.width + (templabel.frame.size.width + self.margin * 2) - (templabel.frame.size.width + self.margin * 2) * (progress * 2 - 1)
+                    scrollLine.frame.origin.x = targetLabel.frame.origin.x + margin
+                }
+                
+            }
+        }
         
         //颜色渐变
         //取出变化的范围
